@@ -1,0 +1,440 @@
+/* Noto Serif JP Regular, Medium, SemiBold をインポート */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&display=swap');
+
+/* Marcellus フォントをインポート */
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+/* EB Garamond フォントをインポート */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+
+// /* Noto Serif JPフォントファミリー */
+//   font-family: 'Noto Serif JP', serif;
+
+// /* Noto Serif JP Regular (デフォルト) */
+//   font-family: 'Noto Serif JP', serif;
+//   font-weight: 400; /* Regular */
+
+// /* Noto Serif JP Medium */
+//   font-family: 'Noto Serif JP', serif;
+//   font-weight: 500; /* Medium */
+
+// /* Noto Serif JP SemiBold */
+//   font-family: 'Noto Serif JP', serif;
+//   font-weight: 600; /* SemiBold */
+
+// /* Marcellusフォントファミリー */
+//   font-family: 'Marcellus', serif;
+
+// /* EB Garamondフォントファミリー */
+//   font-family: 'EB Garamond', serif;
+
+
+//-----------------------------------------------------
+// scss: 変数設定
+//-----------------------------------------------------
+
+// カンプ / コンテンツ幅の指定
+$sp-full-width: 390;  // スマホ用のカンプ幅
+$pc-full-width: 1500;    // PC用のカンプ幅
+$pc-content-width: 1200; // PC用のカンプのコンテンツ幅(ガイド線の幅)
+
+// ブレークポイント設定
+// スマホ: 
+//    0px ~ 768px未満 -> スマホ用のカンプをベースにvwで実装
+// タブレット: 
+//    768px ~ PCコンテンツ幅未満 -> PC用のカンプをベースにvwで実装。予算の多い案件ではタブレット用のカンプが提供される場合もある。
+// PC: 
+//    PCコンテンツ幅以上 -> PC用のカンプをベースにpx(rem)で実装
+$breakpoint-md: 768;
+$breakpoint-lg: $pc-content-width;
+
+// 本番用か否か？本番用の場合は1にする。
+// 0の場合はpxで出力される。パーフェクトピクセルで合わせる時に便利。
+$production: 1;
+
+
+//-----------------------------------------------------
+//  scss: ブレークポイント関数
+//-----------------------------------------------------
+
+$breakpoints: (
+  "md": "screen and (min-width: #{$breakpoint-md}px)",
+  "lg": "screen and (min-width: #{$breakpoint-lg}px)",
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+
+//-----------------------------------------------------
+//  scss: 変換関数群
+//-----------------------------------------------------
+
+// SP用: vwへの変換
+@function vw($px) {
+  @if $production !=1 {
+    @return $px * 1px;
+  }
+
+  @return calc($px * 100vw / $sp-full-width);
+}
+
+// タブレット用: vwへの変換
+@function vwt($px) {
+  @if $production !=1 {
+    @return $px * 1px;
+  }
+
+  @return calc($px * 100vw / $pc-content-width);
+}
+
+// PC用: pxをremに変換
+@function px2Rem($px) {
+  @if $production !=1 {
+    @return $px * 1px;
+  }
+
+  @return calc($px / 16) * 1rem;
+}
+
+// PC用: pxをvwに変換
+// ヘッダーなどコンテンツ幅ベースではなくかんぷ幅ベースでvwを使いたい場合に使用。
+// あまり使わない。
+@function vwp($px) {
+  @if $production !=1 {
+    @return $px * 1px;
+  }
+
+  @return calc($px * 100vw / $pc-full-width);
+}
+
+//-----------------------------------------------------
+//  使用例
+//-----------------------------------------------------
+
+// .title {
+//   text-align:center;
+//   font-size: vw(24);
+//   margin: 0 0 0 0;
+
+//   @include mq() {
+//     font-size: vwt(30);
+//   }
+
+//   @include mq(lg) {
+//     font-size: px2Rem(30);
+//   }
+// }
+
+
+// .plan {
+//   padding: vw(20) vw(10);
+
+//   @include mq() {
+//     padding: vwt(40) vwt(20);
+//   }
+//   @include mq(lg) {
+//     padding: px2Rem(40) px2Rem(20);
+//   }
+
+//   &__container {
+//     @include mq() {
+//       max-width: vwt(1100);
+//       margin-inline: auto;
+//     }
+//     @include mq(lg) {
+//       max-width: px2Rem(1100);
+//       margin-inline: auto;
+//     }
+//   }
+
+//   &__title {
+//     font-size: vw(20);
+//     text-align:center;
+//     margin: 0 0 vw(20) 0;
+
+//     @include mq() {
+//       font-size: vwt(25);
+//       margin: 0 0 vwt(20) 0;
+//     }
+//     @include mq(lg) {
+//       font-size: px2Rem(25);
+//       margin: 0 0 px2Rem(20) 0;
+//     }
+//   }
+
+//   &__item-list {
+//     display:flex;
+//     gap: vw(10);
+
+//     @include mq() {
+//       gap: vwt(20);
+//     }
+//     @include mq(lg) {
+//       gap: px2Rem(20);
+//     }
+//   }
+
+//   &__item {
+//     display:flex;
+//     align-items:center;
+//     justify-content:center;
+//     width: calc((100% - vw(20))/3);
+//     height: vw(50);
+//     background-color: #e6e6fa;
+//     font-size: vw(16);
+
+//     @include mq() {
+//       width: calc((100% - vwt(20))/3);
+//       height: vwt(100);
+//       font-size: vwt(20);
+//     }
+
+//     @include mq(lg) {
+//       width: calc((100% - px2Rem(20))/3);
+//       height: px2Rem(100);
+//       font-size: px2Rem(20);      
+//     }
+//   }
+// }
+
+/* 共通 */
+body {
+  margin: 0 auto;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+/* 変数 */
+@mixin d-flex-justify-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin d-flex-flex-direction {
+  display: flex;
+  flex-direction: column;
+}
+
+/* メインビジュアル */
+.cover {
+  background-image:  url("/assets/images/main_visual_sp.jpg");
+
+  &__container {
+    height: vw(548);
+    padding: vw(24) 0 0 0;
+    @include d-flex-justify-space-between;
+    flex-direction: column; /* 縦並び */
+  }
+
+  &__image-content {
+    text-align: center;
+  }
+
+  &__title {
+    padding: 0 0 0 vw(23);
+  }
+
+  &__title--english {
+    font-size: vw(41);
+    font-family: 'Marcellus', serif;
+    letter-spacing: vw(12);  // XDに合わせて調整
+    @include d-flex-flex-direction;
+    align-items: flex-start;
+    line-height: 1;
+  }
+
+  &__title--japanese {
+    letter-spacing: vw(6);  // XDに合わせて調整
+    padding: vw(10) 0 0 0;
+  }
+
+  &__title--japanese {
+    font-size: vw(20);
+    font-weight: normal;
+  }
+}
+
+/* 申し込み */
+.action {
+  &-cover-next {
+    padding: vw(59) 0;
+  }
+
+  &-faq-next {
+    padding: vw(50) 0 vw(10) 0;
+  }
+  
+  &__container {
+    padding: vw(25) vw(29) vw(34) vw(29);
+    background-color: #F0F4FF;
+    text-align: center;
+    width: vw(358);
+    margin-inline: auto;
+  }
+
+  &__title {
+    font-size: vw(18);
+  }
+
+  &__price {
+    font-size: vw(14);
+    padding: vw(12) 0 vw(21);
+
+  }
+
+  &__btn {
+    display: block;
+    color: #FFF;
+    border-radius: vw(34);
+    padding: vw(15) 0;
+  }
+
+  &__btn--online {
+    background-color: #46C4DB;
+    margin-bottom: vw(20);
+  }
+
+  &__btn--buy {
+    background-color: #5DD5AB;
+  }
+}
+
+/* 商品説明 */
+.features {
+  background-image:  url("/assets/images/keep_your_skin_sp.jpg");
+  padding: vw(48) vw(16) 0;
+  color: #FFF;
+  &__container {
+    height: vw(680);
+  }
+
+  &__title {
+    padding-bottom: vw(31);
+  }
+
+  &__title-english {
+    font-size: vw(30);
+    font-family: 'EB Garamond', serif;
+    letter-spacing: vw(2);  // XDに合わせて調整
+  }
+
+  &__title-japanese {
+    text-align: center;
+    font-size: vw(24);
+    font-weight: normal;
+  }
+
+  &__description {
+    font-size: vw(14);
+    line-height: 2.28;
+  }
+}
+
+/* お客様の声 */
+.reviews {
+  padding: vw(50) 0;
+  &__container {
+    width: vw(358);
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  &__title {
+    padding-bottom: vw(39);
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &--list {
+    background-color: #DBF7F9;
+    padding: vw(28) vw(15) vw(34);
+  }
+
+  &__arrow-left {
+    padding-right: vw(7);
+  }
+
+  &__arrow-right {
+    padding-left: vw(7);
+  }
+
+  &__name {
+    padding: vw(12) 0 vw(21) 0;
+  }
+
+  &__review {
+    font-size: vw(14);
+    text-align: left;
+  }
+
+}
+
+/* Q&A */
+.faq {
+
+  &__container {
+    background: linear-gradient(to right, #F4FFE8, #C6F0FE);
+    padding: vw(32) vw(16);
+  }
+
+  &__title {
+    text-align: center;
+    padding-bottom: vw(40);
+  }
+
+  &__title-english {
+    font-size: vw(30);
+  }
+
+  &__title-japanese {
+    font-size: vw(16);
+    font-weight: normal;
+  }
+
+}
+
+/* フッター */
+.footer {
+  color: #FFF;
+  padding: vw(40) 0 0 0;
+  text-align: center;
+  &__container {
+    background-color: #0071CE;
+    padding: vw(29) 0 vw(24) 0;
+  }
+  &__nav-list {
+    display: flex;
+    justify-content: space-evenly;
+    padding: vw(29) 0 vw(32) 0
+  }
+  &__nav-link {
+    font-size: vw(12);
+    font-weight: normal;
+  }
+  &__copyright {
+    font-size: vw(11)
+  }
+}

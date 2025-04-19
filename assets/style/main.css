@@ -1,0 +1,200 @@
+@charset "UTF-8";
+/* Noto Serif JP Regular, Medium, SemiBold をインポート */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&display=swap");
+/* Marcellus フォントをインポート */
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
+/* EB Garamond フォントをインポート */
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+/* 共通 */
+body {
+  margin: 0 auto;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+/* 変数 */
+/* メインビジュアル */
+.cover {
+  background-image: url("/assets/images/main_visual_sp.jpg");
+}
+.cover__container {
+  height: 140.5128205128vw;
+  padding: 6.1538461538vw 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column; /* 縦並び */
+}
+.cover__image-content {
+  text-align: center;
+}
+.cover__title {
+  padding: 0 0 0 5.8974358974vw;
+}
+.cover__title--english {
+  font-size: 10.5128205128vw;
+  font-family: "Marcellus", serif;
+  letter-spacing: 3.0769230769vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+.cover__title--japanese {
+  letter-spacing: 1.5384615385vw;
+  padding: 2.5641025641vw 0 0 0;
+}
+.cover__title--japanese {
+  font-size: 5.1282051282vw;
+  font-weight: normal;
+}
+
+/* 申し込み */
+.action-cover-next {
+  padding: 15.1282051282vw 0;
+}
+.action-faq-next {
+  padding: 12.8205128205vw 0 2.5641025641vw 0;
+}
+.action__container {
+  padding: 6.4102564103vw 7.4358974359vw 8.7179487179vw 7.4358974359vw;
+  background-color: #F0F4FF;
+  text-align: center;
+  width: 91.7948717949vw;
+  margin-inline: auto;
+}
+.action__title {
+  font-size: 4.6153846154vw;
+}
+.action__price {
+  font-size: 3.5897435897vw;
+  padding: 3.0769230769vw 0 5.3846153846vw;
+}
+.action__btn {
+  display: block;
+  color: #FFF;
+  border-radius: 8.7179487179vw;
+  padding: 3.8461538462vw 0;
+}
+.action__btn--online {
+  background-color: #46C4DB;
+  margin-bottom: 5.1282051282vw;
+}
+.action__btn--buy {
+  background-color: #5DD5AB;
+}
+
+/* 商品説明 */
+.features {
+  background-image: url("/assets/images/keep_your_skin_sp.jpg");
+  padding: 12.3076923077vw 4.1025641026vw 0;
+  color: #FFF;
+}
+.features__container {
+  height: 174.358974359vw;
+}
+.features__title {
+  padding-bottom: 7.9487179487vw;
+}
+.features__title-english {
+  font-size: 7.6923076923vw;
+  font-family: "EB Garamond", serif;
+  letter-spacing: 0.5128205128vw;
+}
+.features__title-japanese {
+  text-align: center;
+  font-size: 6.1538461538vw;
+  font-weight: normal;
+}
+.features__description {
+  font-size: 3.5897435897vw;
+  line-height: 2.28;
+}
+
+/* お客様の声 */
+.reviews {
+  padding: 12.8205128205vw 0;
+}
+.reviews__container {
+  width: 91.7948717949vw;
+  margin-inline: auto;
+  text-align: center;
+}
+.reviews__title {
+  padding-bottom: 10vw;
+}
+.reviews__content {
+  display: flex;
+}
+.reviews--list {
+  background-color: #DBF7F9;
+  padding: 7.1794871795vw 3.8461538462vw 8.7179487179vw;
+}
+.reviews__arrow-left {
+  padding-right: 1.7948717949vw;
+}
+.reviews__arrow-right {
+  padding-left: 1.7948717949vw;
+}
+.reviews__name {
+  padding: 3.0769230769vw 0 5.3846153846vw 0;
+}
+.reviews__review {
+  font-size: 3.5897435897vw;
+  text-align: left;
+}
+
+/* Q&A */
+.faq__container {
+  background: linear-gradient(to right, #F4FFE8, #C6F0FE);
+  padding: 8.2051282051vw 4.1025641026vw;
+}
+.faq__title {
+  text-align: center;
+  padding-bottom: 10.2564102564vw;
+}
+.faq__title-english {
+  font-size: 7.6923076923vw;
+}
+.faq__title-japanese {
+  font-size: 4.1025641026vw;
+  font-weight: normal;
+}
+
+/* フッター */
+.footer {
+  color: #FFF;
+  padding: 10.2564102564vw 0 0 0;
+  text-align: center;
+}
+.footer__container {
+  background-color: #0071CE;
+  padding: 7.4358974359vw 0 6.1538461538vw 0;
+}
+.footer__nav-list {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 7.4358974359vw 0 8.2051282051vw 0;
+}
+.footer__nav-link {
+  font-size: 3.0769230769vw;
+  font-weight: normal;
+}
+.footer__copyright {
+  font-size: 2.8205128205vw;
+}/*# sourceMappingURL=main.css.map */
