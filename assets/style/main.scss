@@ -236,15 +236,38 @@ li {
   flex-direction: column;
 }
 
+
 /* メインビジュアル */
 .cover {
   background-image:  url("/assets/images/main_visual_sp.jpg");
+  background-size: 100vw;
+  @include mq() {
+    background-image:  url("/assets/images/main_visual_pc.jpg");
+  }
+  
+  &__link {
+    width: vw(140);
+    display: block;
+    margin-inline: auto;
+    @include mq() {
+      width: vwt(163);
+    }
+    @include mq() {
+      width: px2Rem(163);
+    }
+  }
 
   &__container {
-    height: vw(548);
+    height: vw(523);
     padding: vw(24) 0 0 0;
-    @include d-flex-justify-space-between;
-    flex-direction: column; /* 縦並び */
+    @include mq() {
+      height: vwt(580);
+      padding: vwt(37) 0 0 0;
+    }
+    @include mq(lg) {
+      height: px2Rem(580);
+      padding: px2Rem(37) 0 0 0;
+    }
   }
 
   &__image-content {
@@ -253,6 +276,15 @@ li {
 
   &__title {
     padding: 0 0 0 vw(23);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    @include mq() {
+      justify-content: center;
+
+    }
   }
 
   &__title--english {
@@ -262,27 +294,54 @@ li {
     @include d-flex-flex-direction;
     align-items: flex-start;
     line-height: 1;
+
+    @include mq() {
+      font-size: vwt(50);
+      letter-spacing: vwt(12);  // XDに合わせて調整
+    }
+    @include mq(lg) {
+      font-size: px2Rem(50);
+      letter-spacing: px2Rem(12);  // XDに合わせて調整
+    }
   }
 
   &__title--japanese {
     letter-spacing: vw(6);  // XDに合わせて調整
     padding: vw(10) 0 0 0;
-  }
-
-  &__title--japanese {
     font-size: vw(20);
     font-weight: normal;
+    @include mq() {
+      font-size: vwt(25);
+      letter-spacing: vwt(6);  // XDに合わせて調整
+    }
+    @include mq(lg) {
+      font-size: px2Rem(25);
+      letter-spacing: px2Rem(6);  // XDに合わせて調整
+    }
   }
 }
 
 /* 申し込み */
 .action {
+  font-size: vw(18);
   &-cover-next {
     padding: vw(59) 0;
+    
+    @include mq() {
+      padding: vwt(48);
+    }
+    @include mq(lg) {
+      padding: px2Rem(48);
+    }
   }
 
   &-faq-next {
     padding: vw(50) 0 vw(10) 0;
+
+    @include mq() {
+      padding: vwt(48) 0 vw(10) 0;
+
+    }
   }
   
   &__container {
@@ -291,16 +350,44 @@ li {
     text-align: center;
     width: vw(358);
     margin-inline: auto;
+
+    @include mq() {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: vwt(47) vwt(29) vwt(41);
+    }
+
   }
 
   &__title {
     font-size: vw(18);
+
+    @include mq() {
+      font-size: vwt(24);
+      text-align: left;
+    }
+    @include mq(lg) {
+      font-size: px2Rem(24);
+      text-align: left;
+    }
   }
 
   &__price {
     font-size: vw(14);
     padding: vw(12) 0 vw(21);
+    @include mq() {
+      font-size: vwt(16);
+    }
+    @include mq(lg) {
+      font-size: px2Rem(16);
+    }
 
+    &--4000 {
+      @include mq() {
+        font-size: vwt(16);
+      }
+    }
   }
 
   &__btn {
@@ -308,52 +395,151 @@ li {
     color: #FFF;
     border-radius: vw(34);
     padding: vw(15) 0;
+
+    @include mq() {
+      font-size: vwt(18);
+      width: vwt(300);
+      padding: vwt(15) 0;
+    }
+    @include mq(lg) {
+      font-size: px2Rem(18);
+      width: px2Rem(300);
+      padding: px2Rem(21) 0;
+    }
+
+  }
+
+  &__price-content {
+    @include mq() {
+      font-size: vwt(18);
+    display: flex;
+
+    }
+    @include mq(lg) {
+      font-size: px2Rem(18);
+      display: flex;
+    }
   }
 
   &__btn--online {
     background-color: #46C4DB;
     margin-bottom: vw(20);
+    @include mq() {
+      margin-bottom: 0;
+    }
+    @include mq(lg) {
+      margin-bottom: 0;
+    }
   }
 
   &__btn--buy {
     background-color: #5DD5AB;
+    width: 100%;
+  }
+
+  &__form {
+    
+    @include mq() {
+      width: vwt(300);
+
+    }
+    @include mq(lg) {
+      width: vwt(300);
+
+    }
+
   }
 }
 
 /* 商品説明 */
 .features {
   background-image:  url("/assets/images/keep_your_skin_sp.jpg");
+  background-size: 100vw;
   padding: vw(48) vw(16) 0;
   color: #FFF;
+
+  @include mq() {
+    display: flex;
+    justify-content: end;
+    background-image:  url("/assets/images/keep_your_skin_pc.jpg");
+    padding: 0;
+  }
+
   &__container {
     height: vw(680);
+    
+    @include mq() {
+      width: vwt(467);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+height: vwt(550);
+padding: vwt(60) vwt(54) 0 0;
+    }
+    @include mq() {
+      width: vwt(467);
+    }
   }
 
   &__title {
     padding-bottom: vw(31);
+
+    @include mq() {
+      padding-bottom: 0;
+    }
   }
 
   &__title-english {
     font-size: vw(30);
     font-family: 'EB Garamond', serif;
     letter-spacing: vw(2);  // XDに合わせて調整
+
+    @include mq() {
+      font-size: vwt(38);
+      letter-spacing: 0;  // XDに合わせて調整
+    }
+    @include mq() {
+      font-size: px2Rem(38);
+
+      letter-spacing: 0;  // XDに合わせて調整
+    }
   }
 
   &__title-japanese {
     text-align: center;
     font-size: vw(24);
     font-weight: normal;
+    @include mq() {
+      font-size: vwt(24);
+text-align: left;
+
+    }
+    @include mq() {
+      font-size: px2Rem(24);
+    }
   }
 
   &__description {
     font-size: vw(14);
     line-height: 2.28;
+    @include mq() {
+      font-size: vwt(14);
+    }
+    @include mq() {
+      font-size: px2Rem(14);
+    }
   }
 }
 
 /* お客様の声 */
 .reviews {
-  padding: vw(50) 0;
+  padding: vw(25) 0 vw(75) 0;
+  @include mq() {
+    padding: 0 0 vwt(80) 0;
+  }
+  .is-active {
+    display: block;
+  }
   &__container {
     width: vw(358);
     margin-inline: auto;
@@ -362,79 +548,346 @@ li {
 
   &__title {
     padding-bottom: vw(39);
+@include mq() {
+  padding-bottom: vwt(44);
+
+}
+
   }
 
-  &__content {
-    display: flex;
+  &__title-english {
+    font-size: vw(30);
+    font-family: 'EB Garamond', serif;
+    letter-spacing: vw(2);  // XDに合わせて調整
+  @include mq() {
+    font-size: vwt(45);
   }
 
-  &--list {
+  }
+  
+  &__title-japanese {
+    font-size: vw(16);
+    font-weight: normal;
+
+    @include mq() {
+      font-size: vwt(20);
+    }
+  }
+
+  &__name {
+    font-size: vw(14);
+
+    @include mq() {
+      font-size: vwt(15);
+    }
+  }
+
+  &__customer-icon {
+    width: 100%;
+    max-width: vw(80);
+  }
+
+  &__items {
+    max-width: vw(390); /* スマホサイズに合わせてお好みで */
+  }
+
+  &__item {
     background-color: #DBF7F9;
     padding: vw(28) vw(15) vw(34);
+    display: none;
+    box-sizing: border-box;
+    padding: 16px;
+    background: #f9f9f9;
+
+    @include mq(){
+      padding: vwt(40) vwt(15) vwt(47);
+    }
+     
+
+
   }
 
-  &__arrow-left {
+  &__arrow--left {
     padding-right: vw(7);
   }
 
-  &__arrow-right {
+  &__arrow--right {
     padding-left: vw(7);
+  }
+
+  &__customer-icon {
+    margin-inline: auto;
+
+    @include mq() {
+      width: vwt(100);
+    }
   }
 
   &__name {
     padding: vw(12) 0 vw(21) 0;
+    @include mq() {
+      padding: vwt(12) 0 vwt(17) 0;
+    }
   }
 
   &__review {
     font-size: vw(14);
     text-align: left;
+
+    @include mq() {
+      font-size: vwt(16);
+    }
   }
 
+  &__dots {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  /* ドットの基本スタイル */
+  &__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: block;
+    margin: 0 vw(5);
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .slick-active &__dot {
+    background-color: #00AFBF;
+  }
+  
+  .slick-slider {
+    display: flex;
+    position: relative;
+  }
+
+  .slick-dots {
+    position:absolute;
+    bottom: -10%;
+    left: 50%;
+    display: flex;
+    transform: translate(-50%, -50%);
+  }
 }
 
 /* Q&A */
 .faq {
+  background: linear-gradient(to right, #F4FFE8, #C6F0FE);
 
   &__container {
-    background: linear-gradient(to right, #F4FFE8, #C6F0FE);
-    padding: vw(32) vw(16);
+    padding: vw(32) 0 vw(9) vw(16);
+
+    @include mq() {
+      width: vwt(600);
+      margin-inline: auto;
+      padding: vwt(40) 0;
+
+    }
   }
 
   &__title {
     text-align: center;
     padding-bottom: vw(40);
+
+    @include mq() {
+      padding-bottom: vwt(44);
+
+    }
   }
 
   &__title-english {
     font-size: vw(30);
+
+    @include mq() {
+      font-size: vwt(45);
+    }
   }
 
   &__title-japanese {
     font-size: vw(16);
     font-weight: normal;
+
+    @include mq() {
+      font-size: vwt(20);
+    }
   }
 
+  &__question {
+    display: flex
+  }
+
+  &__text {
+    display: block;
+    &--q {
+      font-size: vw(16);
+      font-family: 'EB Garamond', serif;
+      padding: 0 vw(12) 0 0;
+
+      @include mq() {
+        font-size: vwt(18);
+        padding: 0 vwt(16) 0 0;
+      }
+    }
+    &--a {
+      font-size: vw(15);
+      padding: 0 vw(24) 0 0;
+      @include mq() {
+        font-size: vwt(15);
+        padding: 0 vwt(16) 0 0;
+
+      }
+    }
+    &--question {
+      width: vw(271);
+      font-size: vw(15);
+          @include mq() {
+      font-size: vwt(15);
+    }
+    }
+    &--answer {
+      font-size: vw(15);
+      @include mq() {
+        font-size: vwt(15);
+      }
+    }
+
+  }
+
+  &__accordion {
+    width: 100%;
+    padding-bottom: vw(20);
+  }
+  
+  &__accordion-trigger {
+    width: 100%;
+    padding:vw(16);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s;
+  }
+  
+  &__accordion-trigger:hover {
+    background-color: #f8fafc;
+  }
+  
+  &__accordion-icon {
+    transition: transform 0.5s;
+  }
+  
+  &__accordion-trigger[aria-expanded="true"] &__accordion-icon {
+    transform: rotate(180deg);
+  }
+  
+  &__accordion-content {
+    max-height: 0;
+    display: flex;
+    overflow: hidden;
+    background-color: #FFF;
+    transition: max-height 0.5s ease-in-out;
+  }
+  
+  &__accordion-content.open {
+    max-height: 350px;
+  }
+  
+  &__accordion-body {
+    padding: vw(16);
+    display: flex;
+  }
+  
 }
 
 /* フッター */
 .footer {
   color: #FFF;
-  padding: vw(40) 0 0 0;
   text-align: center;
+  background-color: #0071CE;
+  @include mq() {
+    padding: vwt(31) 0 vwt(34) 0;
+  }
+  &__link {
+    display: block;
+    width: vw(163);
+    margin-inline: auto;
+    @include mq() {
+      width: vwt(186);
+    }
+  }
+  &__logo {
+    width: 100%;
+  }
   &__container {
-    background-color: #0071CE;
     padding: vw(29) 0 vw(24) 0;
+    @include mq() {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 0;
+    }
   }
   &__nav-list {
     display: flex;
     justify-content: space-evenly;
-    padding: vw(29) 0 vw(32) 0
+    padding: vw(29) 0 vw(32) 0;
+    @include mq() {
+      padding: 0;
+    }
+
   }
   &__nav-link {
     font-size: vw(12);
     font-weight: normal;
+    @include mq() {
+      font-size: vwt(14);
+    }
+  }
+  &__nav-item {
+
+    @include mq() {
+      padding: 0 vwt(32) 0 0;
+    }
   }
   &__copyright {
-    font-size: vw(11)
+    font-size: vw(11);
+    @include mq() {
+      font-size: vwt(12);
+    }
   }
+
+  position: relative;
+
+}
+
+.pagetop {
+  cursor: pointer;
+  position: sticky;
+  bottom: vw(1);
+  left: vw(400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: vw(40);
+  height: vw(40);
+  transition: .3s;
+  color: #00A6C4;
+  background: #0071CE;
+  opacity: 0;
+@include mq() {
+  width: vwt(40);
+  height: vwt(40);
+}
+}
+
+.pagetop:hover {
+    box-shadow: 0 0 10px #00A6C4;
 }
