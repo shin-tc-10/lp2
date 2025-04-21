@@ -222,10 +222,10 @@ li {
     padding: vw(77) 0 vw(50) 0;
     
     @include mq() {
-      padding: vwt(48);
+      padding: vwt(48) vwt(48) vwt(56);
     }
     @include mq(lg) {
-      padding: px2Rem(48);
+      padding: px2Rem(48) px2Rem(48) px2Rem(56);
     }
   }
 
@@ -251,11 +251,11 @@ li {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
-      padding: vwt(40) vwt(29) vwt(20) 0;
+      padding: vwt(32) vwt(29) vwt(20) vwt(4.6);
       width: vwt(1000);
     }
     @include mq(lg) {
-      padding: px2Rem(40) px2Rem(29) px2Rem(20) 0;
+      padding: px2Rem(32) px2Rem(29) px2Rem(20) px2Rem(4.6);
       width: px2Rem(1000);
     }
   }
@@ -413,11 +413,11 @@ li {
     line-height: 1.6;
     @include mq() {
       font-size: vwt(38);
-      letter-spacing: 1.1;  // XDに合わせて調整
+      letter-spacing: 1.4;  // XDに合わせて調整
     }
     @include mq(lg) {
       font-size: px2Rem(38);
-      letter-spacing: 0;  // XDに合わせて調整
+      letter-spacing: 1.4;  // XDに合わせて調整
     }
   }
 
@@ -544,9 +544,11 @@ li {
     line-height:2;
     @include mq() {
       width: vwt(300);
+      padding-top: vwt(43);
     }
     @include mq(lg) {
       width: px2Rem(300);
+      padding-top: px2Rem(43);
     }
   }
 
@@ -937,7 +939,7 @@ li {
   cursor: pointer;
   position: sticky;
   bottom: vw(1);
-  left: 90%;
+  left: 87%;
   display: flex;
   align-items: center;
   justify-content: center;

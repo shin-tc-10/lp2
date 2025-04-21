@@ -145,12 +145,12 @@ li {
 }
 @media screen and (min-width: 768px) {
   .action-cover-next {
-    padding: 4vw;
+    padding: 4vw 4vw 4.6666666667vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .action-cover-next {
-    padding: 3rem;
+    padding: 3rem 3rem 3.5rem;
   }
 }
 .action-faq-next {
@@ -178,13 +178,13 @@ li {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 3.3333333333vw 2.4166666667vw 1.6666666667vw 0;
+    padding: 2.6666666667vw 2.4166666667vw 1.6666666667vw 0.3833333333vw;
     width: 83.3333333333vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .action__container {
-    padding: 2.5rem 1.8125rem 1.25rem 0;
+    padding: 2rem 1.8125rem 1.25rem 0.2875rem;
     width: 62.5rem;
   }
 }
@@ -355,13 +355,13 @@ li {
 @media screen and (min-width: 768px) {
   .features__title-english {
     font-size: 3.1666666667vw;
-    letter-spacing: 1.1;
+    letter-spacing: 1.4;
   }
 }
 @media screen and (min-width: 1200px) {
   .features__title-english {
     font-size: 2.375rem;
-    letter-spacing: 0;
+    letter-spacing: 1.4;
   }
 }
 .features__title-japanese {
@@ -516,11 +516,13 @@ li {
 @media screen and (min-width: 768px) {
   .reviews__item {
     width: 25vw;
+    padding-top: 3.5833333333vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .reviews__item {
     width: 18.75rem;
+    padding-top: 2.6875rem;
   }
 }
 .reviews__arrow--left {
@@ -966,7 +968,7 @@ li {
   cursor: pointer;
   position: sticky;
   bottom: 0.2564102564vw;
-  left: 90%;
+  left: 87%;
   display: flex;
   align-items: center;
   justify-content: center;
