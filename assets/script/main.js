@@ -28,7 +28,7 @@ $(() =>  {
               breakpoint: 9999, // 768px以上（PC側）を捕まえる
               settings: {
                 slidesToShow: 3,
-                slidesToScroll: 3
+                slidesToScroll: 3,
               }
             }
           ]
