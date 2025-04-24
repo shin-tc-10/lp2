@@ -8,7 +8,7 @@
 /* 共通 */
 body {
   margin: 0 auto;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Noto Serif JP", serif;
   line-height: 1.75;
   color: #333;
 }
@@ -32,11 +32,26 @@ li {
 /* メインビジュアル */
 .cover {
   background-image: url("/assets/images/main_visual_sp.jpg");
-  background-size: 100vw;
+  background-size: 100%;
+  background-position: top center;
+  height: 140.5128205128vw;
+  padding: 4.8717948718vw 0 0 0;
+  margin-bottom: 14.8717948718vw;
 }
 @media screen and (min-width: 768px) {
   .cover {
     background-image: url("/assets/images/main_visual_pc.jpg");
+    background-size: cover;
+    height: 60vw;
+    padding: 3.0833333333vw 0 0 0;
+    margin-bottom: 4vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cover {
+    height: 45rem;
+    padding: 2.3125rem 0 0 0;
+    margin-bottom: 3rem;
   }
 }
 .cover__link {
@@ -54,22 +69,6 @@ li {
     width: 10.1875rem;
   }
 }
-.cover__container {
-  height: 134.1025641026vw;
-  padding: 4.8717948718vw 0 0 0;
-}
-@media screen and (min-width: 768px) {
-  .cover__container {
-    height: 60vw;
-    padding: 3.0833333333vw 0 0 0;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .cover__container {
-    height: 45rem;
-    padding: 2.3125rem 0 0 0;
-  }
-}
 .cover__image-content {
   text-align: center;
 }
@@ -77,48 +76,51 @@ li {
   width: 100%;
 }
 .cover__title {
-  padding: 0 0 0 5.8974358974vw;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: end;
+  margin: 95.3846153846vw 0 0 5.8205128205vw;
 }
 @media screen and (min-width: 768px) {
   .cover__title {
     justify-content: center;
-    padding: 0 0 8.3333333333vw 19.1666666667vw;
+    margin: 17.1666666667vw 0 0 18.5833333333vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .cover__title {
     justify-content: center;
-    padding: 0 0 6.25rem 14.375rem;
+    margin: 12.875rem 0 0 13.9375rem;
   }
 }
 .cover__title--english {
   font-size: 10.5128205128vw;
   font-family: "Marcellus", serif;
-  letter-spacing: 3.0769230769vw;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  letter-spacing: 0.3em;
+  font-weight: normal;
   line-height: 1.2;
+  width: 63.0769230769vw;
+  margin-bottom: 2.5641025641vw;
 }
 @media screen and (min-width: 768px) {
   .cover__title--english {
     font-size: 4.1666666667vw;
-    letter-spacing: 1vw;
+    letter-spacing: 1.225vw;
+    width: 30.3333333333vw;
+    margin-bottom: 0;
+    line-height: 1.3;
   }
 }
 @media screen and (min-width: 1200px) {
   .cover__title--english {
     font-size: 3.125rem;
-    letter-spacing: 0.75rem;
+    letter-spacing: 0.91875rem;
+    width: 22.75rem;
   }
 }
 .cover__title--japanese {
   letter-spacing: 1.5384615385vw;
-  padding: 3.3333333333vw 0 0 0;
   font-size: 5.1282051282vw;
   font-weight: normal;
   line-height: 1;
@@ -126,13 +128,14 @@ li {
 @media screen and (min-width: 768px) {
   .cover__title--japanese {
     font-size: 2.0833333333vw;
-    letter-spacing: 0.5vw;
+    letter-spacing: 0.5833333333vw;
+    line-height: 2;
   }
 }
 @media screen and (min-width: 1200px) {
   .cover__title--japanese {
     font-size: 1.5625rem;
-    letter-spacing: 0.375rem;
+    letter-spacing: 0.4375rem;
   }
 }
 
@@ -141,73 +144,79 @@ li {
   font-size: 4.6153846154vw;
 }
 .action-cover-next {
-  padding: 19.7435897436vw 0 12.8205128205vw 0;
+  margin: 0 0 12.8205128205vw 0;
 }
 @media screen and (min-width: 768px) {
   .action-cover-next {
-    padding: 4vw 4vw 4.6666666667vw;
+    margin: 0 0 4vw 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .action-cover-next {
-    padding: 3rem 3rem 3.5rem;
+    margin: 0 0 3rem 0;
   }
 }
 .action-faq-next {
-  padding: 12.8205128205vw 0 0 0;
+  margin: 0 0 2.5641025641vw 0;
 }
 @media screen and (min-width: 768px) {
   .action-faq-next {
-    padding: 4vw 0 0.8333333333vw 0;
+    margin: 0 0 0.8333333333vw 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .action-faq-next {
-    padding: 3rem 0 0.625rem 0;
+    margin: 0 0 0.625rem 0;
   }
 }
 .action__container {
-  padding: 6.1538461538vw 7.4358974359vw 7.9487179487vw 7.4358974359vw;
   background-color: #F0F4FF;
   text-align: center;
   width: 91.7948717949vw;
   margin-inline: auto;
+  padding: 5.1282051282vw 7.1794871795vw 8.9743589744vw;
 }
 @media screen and (min-width: 768px) {
   .action__container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 2.6666666667vw 2.4166666667vw 1.6666666667vw 0.3833333333vw;
     width: 83.3333333333vw;
+    height: 12.1666666667vw;
+    padding: 3.3333333333vw 3.3333333333vw 3.4166666667vw 0.8333333333vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .action__container {
-    padding: 2rem 1.8125rem 1.25rem 0.2875rem;
     width: 62.5rem;
+    padding: 2.5rem 2.5rem 2.5625rem 0.625rem;
+    height: 9.125rem;
   }
 }
 .action__title {
   font-size: 4.6153846154vw;
-  padding-bottom: 1.7692307692vw;
+  margin-bottom: 1.7692307692vw;
+  line-height: 1.5;
+  margin-bottom: 4.6153846154vw;
+  letter-spacing: 1.3px;
 }
 @media screen and (min-width: 768px) {
   .action__title {
     font-size: 2vw;
     text-align: left;
-    padding-bottom: 0;
+    margin: 0 5vw 0 3.3333333333vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .action__title {
     font-size: 1.5rem;
     text-align: left;
+    margin: 0 3.75rem 0 2.5rem;
   }
 }
 .action__price {
   font-size: 3.5897435897vw;
-  padding: 3.0769230769vw 0 5.3846153846vw;
+  margin: 3.0769230769vw 0 5.3846153846vw;
 }
 @media screen and (min-width: 768px) {
   .action__price {
@@ -236,7 +245,7 @@ li {
   display: block;
   color: #FFF;
   border-radius: 8.7179487179vw;
-  padding: 3.8461538462vw 0;
+  padding: 3.0769230769vw 0;
 }
 @media screen and (min-width: 768px) {
   .action__btn {
@@ -266,11 +275,16 @@ li {
 .action__btn--online {
   background-color: #46C4DB;
   border: 1px solid #46C4DB;
-  margin-bottom: 4.1025641026vw;
+  margin-bottom: 5.1282051282vw;
 }
 @media screen and (min-width: 768px) {
   .action__btn--online {
-    margin-bottom: 0;
+    margin: 0 1.6666666667vw 0 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .action__btn--online {
+    margin: 0 1.25rem 0 0;
   }
 }
 .action__btn--online:hover {
@@ -300,41 +314,44 @@ li {
 /* 商品説明 */
 .features {
   background-image: url("/assets/images/keep_your_skin_sp.jpg");
-  background-size: 100vw;
-  padding: 11.0256410256vw 4.1025641026vw 0 3.8461538462vw;
+  background-size: cover;
+  background-position: center center;
+  padding: 11.0256410256vw 0 0 0;
   color: #FFF;
+  height: 174.358974359vw;
+  margin-bottom: 11.2820512821vw;
 }
 @media screen and (min-width: 768px) {
   .features {
-    display: flex;
-    justify-content: end;
     background-image: url("/assets/images/keep_your_skin_pc.jpg");
-    padding: 5.4166666667vw 17vw 0 0;
+    padding: 5.4166666667vw 21.1666666667vw 0 0;
+    height: 45.8333333333vw;
+    margin-bottom: 4.625rem;
   }
 }
 @media screen and (min-width: 1200px) {
   .features {
-    padding: 4.0625rem 12.75rem 0 0;
+    padding: 7.8125rem 12.5rem 0 0;
+    height: 34.375rem;
+    margin-bottom: 4.625rem;
   }
 }
 .features__container {
-  height: 174.358974359vw;
+  text-align: left;
+  width: 91.7948717949vw;
+  margin-inline: auto;
+  line-height: 1.3;
 }
 @media screen and (min-width: 768px) {
   .features__container {
     width: 38.9166666667vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 45.8333333333vw;
-    padding: 5vw 4.5vw 0 0;
+    margin-inline: 0;
+    margin-left: auto;
   }
 }
 @media screen and (min-width: 1200px) {
   .features__container {
     width: 29.1875rem;
-    height: 34.375rem;
-    padding: 3.75rem 3.375rem 0 0;
   }
 }
 .features__title {
@@ -344,24 +361,32 @@ li {
 @media screen and (min-width: 768px) {
   .features__title {
     padding-bottom: 0;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 768px) {
+  .features__title {
+    margin-bottom: 0.9375rem;
   }
 }
 .features__title-english {
   font-size: 7.6923076923vw;
   font-family: "EB Garamond", serif;
-  letter-spacing: 0.3076923077vw;
   line-height: 1.6;
+  display: block;
+  letter-spacing: 0.3333333333vw;
 }
 @media screen and (min-width: 768px) {
   .features__title-english {
     font-size: 3.1666666667vw;
-    letter-spacing: 1.4;
+    letter-spacing: 0.1083333333vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .features__title-english {
     font-size: 2.375rem;
-    letter-spacing: 1.4;
+    letter-spacing: 0.08125rem;
+    line-height: 1.6;
   }
 }
 .features__title-japanese {
@@ -393,36 +418,37 @@ li {
 @media screen and (min-width: 1200px) {
   .features__description {
     font-size: 0.875rem;
+    width: 26.875rem;
   }
 }
 
 /* お客様の声 */
 .reviews {
-  padding: 0 0 19.2307692308vw 0;
+  margin: 0 0 19.2307692308vw 0;
+  padding: 0 3.3333333333vw;
   line-height: 1.7;
   /* ドットの基本スタイル */
 }
 @media screen and (min-width: 768px) {
   .reviews {
-    padding: 0 0 9.1666666667vw 0;
+    margin: 0 0 8.6666666667vw 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .reviews {
-    padding: 0 0 6.875rem 0;
+    margin: 0 0 6.5rem 0;
   }
 }
 .reviews .is-active {
   display: block;
 }
 .reviews__container {
-  width: 91.7948717949vw;
-  margin-inline: auto;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
   .reviews__container {
     width: 96.3333333333vw;
+    margin-inline: auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -431,16 +457,16 @@ li {
   }
 }
 .reviews__title {
-  padding-bottom: 10vw;
+  margin-bottom: 10vw;
 }
 @media screen and (min-width: 768px) {
   .reviews__title {
-    padding-bottom: 3.6666666667vw;
+    margin-bottom: 3.6666666667vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .reviews__title {
-    padding-bottom: 2.75rem;
+    margin-bottom: 2.75rem;
   }
 }
 .reviews__title-english {
@@ -451,11 +477,13 @@ li {
 @media screen and (min-width: 768px) {
   .reviews__title-english {
     font-size: 3.75vw;
+    letter-spacing: 0.1666666667vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .reviews__title-english {
     font-size: 2.8125rem;
+    letter-spacing: 0.125rem;
   }
 }
 .reviews__title-japanese {
@@ -475,23 +503,36 @@ li {
 }
 .reviews__name {
   font-size: 3.5897435897vw;
-  padding: 3.0769230769vw 0 2.3076923077vw 0;
+  line-height: 2.9;
 }
 @media screen and (min-width: 768px) {
   .reviews__name {
     font-size: 1.25vw;
-    padding: 1vw 0 1.4166666667vw 0;
+    margin: 0.4166666667vw 0 0 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .reviews__name {
     font-size: 0.9375rem;
-    padding: 0.75rem 0 1.0625rem 0;
+    margin: 0.3125rem 0 0 0;
   }
 }
 .reviews__customer-icon {
   width: 100%;
   max-width: 20.5128205128vw;
+  margin-inline: auto;
+}
+@media screen and (min-width: 768px) {
+  .reviews__customer-icon {
+    max-width: 6.6666666667vw;
+    width: 8.3333333333vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .reviews__customer-icon {
+    max-width: px2rem(80);
+    width: 6.25rem;
+  }
 }
 .reviews__items {
   max-width: 100vw; /* スマホサイズに合わせてお好みで */
@@ -508,54 +549,42 @@ li {
 }
 .reviews__item {
   background-color: #DBF7F9;
-  padding: 4.1025641026vw 3.0769230769vw 4.1025641026vw 4.1025641026vw;
   display: none;
   box-sizing: border-box;
   line-height: 2;
+  margin: 0 2.5641025641vw;
+  padding: 5.8974358974vw 3.3333333333vw 0;
 }
 @media screen and (min-width: 768px) {
   .reviews__item {
-    width: 25vw;
-    padding-top: 3.5833333333vw;
+    padding: 1.9166666667vw 1.0833333333vw 0;
+    line-height: 1.75;
+    margin: 0 0.8333333333vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .reviews__item {
-    width: 18.75rem;
-    padding-top: 2.6875rem;
-  }
-}
-.reviews__arrow--left {
-  padding-right: 1.7948717949vw;
-}
-.reviews__arrow--right {
-  padding-left: 1.7948717949vw;
-}
-.reviews__customer-icon {
-  margin-inline: auto;
-}
-@media screen and (min-width: 768px) {
-  .reviews__customer-icon {
-    width: 8.3333333333vw;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .reviews__customer-icon {
-    width: 6.25rem;
+    padding: 1.4375rem 0.8125rem 0;
+    line-height: 1.75;
+    margin: 0 0.625rem;
   }
 }
 .reviews__review {
   font-size: 3.5897435897vw;
   text-align: left;
+  letter-spacing: -0.0512820513vw;
 }
 @media screen and (min-width: 768px) {
   .reviews__review {
     font-size: 1.3333333333vw;
+    letter-spacing: 0;
+    margin: 0 2.5vw 2.5vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .reviews__review {
     font-size: 1rem;
+    margin: 0 1.875rem 1.875rem;
   }
 }
 .reviews__dots {
@@ -598,21 +627,6 @@ li {
     margin: 0 0.25rem;
   }
 }
-@media screen and (min-width: 768px) {
-  .reviews__items {
-    padding: 0;
-  }
-}
-@media screen and (min-width: 768px) {
-  .reviews__items .slick-slide {
-    margin: 0 0.8333333333vw;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .reviews__items .slick-slide {
-    margin: 0 0.625rem;
-  }
-}
 .slick-active .reviews__dot {
   background-color: #00AFBF;
 }
@@ -635,8 +649,8 @@ li {
   align-items: center;
 }
 .reviews__arrow--left, .reviews__arrow--right {
-  width: 10.2564102564vw;
-  height: 10.2564102564vw;
+  width: 8.9743589744vw;
+  height: 8.9743589744vw;
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
@@ -662,41 +676,52 @@ li {
 /* Q&A */
 .faq {
   background: linear-gradient(to right, #F4FFE8, #C6F0FE);
+  padding: 7.6923076923vw 3.8461538462vw 4.0512820513vw;
+  margin-bottom: 12.8205128205vw;
+}
+@media screen and (min-width: 768px) {
+  .faq {
+    padding: 3.1666666667vw 2.5vw 1.875vw 2.5vw;
+    margin-bottom: 4.1666666667vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .faq {
+    padding: 2.375rem 1.875rem 1.40625rem 1.875rem;
+    margin-bottom: 3.125rem;
+  }
 }
 .faq__container {
-  padding: 6.9230769231vw 3.7179487179vw 2.3076923077vw;
+  margin-inline: auto;
 }
 @media screen and (min-width: 768px) {
   .faq__container {
     width: 50vw;
-    margin-inline: auto;
-    padding: 3.3333333333vw 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .faq__container {
     width: 37.5rem;
-    padding: 2.5rem 0;
   }
 }
 .faq__title {
   text-align: center;
-  padding-bottom: 8.0256410256vw;
+  margin-bottom: 8.0256410256vw;
   font-family: "EB Garamond", serif;
 }
 @media screen and (min-width: 768px) {
   .faq__title {
-    padding-bottom: 3.6666666667vw;
+    margin-bottom: 3.6666666667vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .faq__title {
-    padding-bottom: 2.75rem;
+    margin-bottom: 2.375rem;
   }
 }
 .faq__title-english {
   font-size: 7.6923076923vw;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 @media screen and (min-width: 768px) {
   .faq__title-english {
@@ -722,6 +747,92 @@ li {
     font-size: 1.25rem;
   }
 }
+.faq__accordion {
+  width: 100%;
+  background: white;
+  margin-bottom: 5.1282051282vw;
+  padding: 3.5897435897vw 2.5641025641vw 1.7948717949vw 4.4615384615vw;
+}
+@media screen and (min-width: 768px) {
+  .faq__accordion {
+    margin-bottom: 2.0833333333vw;
+    padding: 0 0 0.25vw 1.45vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .faq__accordion {
+    margin-bottom: 1.5625rem;
+    padding: 0 0 0.1875rem 1.0875rem;
+  }
+}
+.faq__accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+.faq__accordion-trigger[aria-expanded=true] .faq__accordion-icon {
+  transform: rotate(180deg);
+}
+.faq__accordion-content {
+  max-height: 0;
+  display: flex;
+  padding: 3.3333333333vw 0 0 0;
+  overflow: hidden;
+  background-color: #FFF;
+  transition: max-height 0.5s ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  .faq__accordion-content {
+    padding: 0;
+  }
+}
+.faq__accordion-content.open {
+  max-height: 89.7435897436vw;
+}
+@media screen and (min-width: 768px) {
+  .faq__accordion-content.open {
+    max-height: 29.1666666667vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .faq__accordion-content.open {
+    max-height: 21.875rem;
+  }
+}
+.faq__accordion-body {
+  display: flex;
+  padding: 0 0 7.6923076923vw 0;
+}
+@media screen and (min-width: 768px) {
+  .faq__accordion-body {
+    padding: 0 0 0.8333333333vw 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .faq__accordion-body {
+    padding: 0 0 0.625rem 0;
+  }
+}
+.faq__accordion-icon {
+  transition: transform 0.5s;
+  width: 8.9743589744vw;
+  margin-bottom: 2.9487179487vw;
+}
+@media screen and (min-width: 768px) {
+  .faq__accordion-icon {
+    width: 2.9166666667vw;
+    margin: 0.375vw 0 0 3.3333333333vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .faq__accordion-icon {
+    width: 2.1875rem;
+    margin: px2rem(4.5) 0 0 px2rem(40);
+  }
+}
 .faq__question {
   display: flex;
 }
@@ -731,34 +842,34 @@ li {
 .faq__text--q {
   font-size: 4.1025641026vw;
   font-family: "EB Garamond", serif;
-  padding: 0 0.0256410256vw 4.358974359vw 0;
+  margin: 0 2.6666666667vw 4.1025641026vw 0;
 }
 @media screen and (min-width: 768px) {
   .faq__text--q {
     font-size: 1.5vw;
-    padding: 0 1.3333333333vw 0 0;
+    margin: 1.5833333333vw 0.8666666667vw 1.3333333333vw 0.8333333333vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .faq__text--q {
     font-size: 1.125rem;
-    padding: 0 1rem 0 0;
+    margin: 1.1875rem 0.65rem 1rem 0.625rem;
   }
 }
 .faq__text--a {
   font-size: 3.8461538462vw;
-  padding: 0 3.3333333333vw 0 0;
+  margin: 2.0512820513vw 3.0769230769vw 0 0;
 }
 @media screen and (min-width: 768px) {
   .faq__text--a {
     font-size: 1.25vw;
-    padding: 0 1.3333333333vw 0 0;
+    margin: 0 1.1vw 0 0.8333333333vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .faq__text--a {
     font-size: 0.9375rem;
-    padding: 0 1rem 0 0;
+    margin: 0 0.825rem 0 0.625rem;
   }
 }
 .faq__text--question {
@@ -776,94 +887,19 @@ li {
 }
 .faq__text--answer {
   font-size: 3.8461538462vw;
-  line-height: 1.8;
+  line-height: 1.9;
+  padding: 0 0 0 0;
 }
 @media screen and (min-width: 768px) {
   .faq__text--answer {
     font-size: 1.25vw;
+    padding: 0 0.8333333333vw 0 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .faq__text--answer {
     font-size: 0.9375rem;
-  }
-}
-.faq__accordion {
-  width: 100%;
-  padding-bottom: 7.4358974359vw;
-}
-@media screen and (min-width: 768px) {
-  .faq__accordion {
-    padding-bottom: 2.4166666667vw;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .faq__accordion {
-    padding-bottom: 1.8125rem;
-  }
-}
-.faq__accordion-trigger {
-  width: 100%;
-  padding: 2.3076923077vw 4.1025641026vw 4.8717948718vw 5.3846153846vw;
-  display: flex;
-  align-items: center;
-  background: white;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.5s;
-}
-@media screen and (min-width: 768px) {
-  .faq__accordion-trigger {
-    padding: 0.75vw 1.3333333333vw 1.5833333333vw 1.75vw;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .faq__accordion-trigger {
-    padding: 0.5625rem 1rem 1.1875rem 1.3125rem;
-  }
-}
-.faq__accordion-trigger:hover {
-  background-color: #f8fafc;
-}
-.faq__accordion-icon {
-  transition: transform 0.5s;
-  margin-left: auto;
-}
-.faq__accordion-trigger[aria-expanded=true] .faq__accordion-icon {
-  transform: rotate(180deg);
-}
-.faq__accordion-content {
-  max-height: 0;
-  display: flex;
-  overflow: hidden;
-  background-color: #FFF;
-  transition: max-height 0.5s ease-in-out;
-}
-.faq__accordion-content.open {
-  max-height: 89.7435897436vw;
-}
-@media screen and (min-width: 768px) {
-  .faq__accordion-content.open {
-    max-height: 29.1666666667vw;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .faq__accordion-content.open {
-    max-height: 21.875rem;
-  }
-}
-.faq__accordion-body {
-  padding: 0.1538461538vw 5.1282051282vw 8.9743589744vw 4.1025641026vw;
-  display: flex;
-}
-@media screen and (min-width: 768px) {
-  .faq__accordion-body {
-    padding: 0.05vw 1.6666666667vw 2.9166666667vw 1.3333333333vw;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .faq__accordion-body {
-    padding: 0.0375rem 1.25rem 2.1875rem 1rem;
+    padding: 0 0.625rem 0 0;
   }
 }
 
@@ -903,7 +939,7 @@ li {
   width: 100%;
 }
 .footer__container {
-  padding: 7.4358974359vw 0 6.1538461538vw 0;
+  padding: 5.641025641vw 0 6.1538461538vw 0;
 }
 @media screen and (min-width: 768px) {
   .footer__container {
@@ -968,7 +1004,7 @@ li {
   cursor: pointer;
   position: sticky;
   bottom: 0.2564102564vw;
-  left: 87%;
+  left: 85.5%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -979,19 +1015,25 @@ li {
   background: #0071CE;
   border: 1px solid #0071CE;
   opacity: 0;
+  padding: 3.3333333333vw;
 }
 @media screen and (min-width: 768px) {
   .pagetop {
     width: 3.3333333333vw;
     height: 3.3333333333vw;
+    padding: 1.0833333333vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .pagetop {
     width: 2.5rem;
     height: 2.5rem;
+    padding: 0.8125rem;
   }
 }
 .pagetop:hover {
   opacity: 0.1;
+}
+.pagetop__img {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */
