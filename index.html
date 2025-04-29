@@ -2,81 +2,91 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>肌のうるおい、煌めく Kirameki Cream | Kira-meki</title>
-    <meta name="description" content="Kirameki Creamはお肌のうるおいを美しく保ちます。" />
+    <meta name="description" content="Kirameki Creamはお肌のうるおいを美しく保ちます。" >
 
     <!-- OGP設定 -->
-    <meta property="og:title" content="肌のうるおい、煌めく Kirameki Cream | Kira-meki" />
-    <meta property="og:description" content="Kirameki Creamはお肌のうるおいを美しく保ちます。" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="/lp2/index.html" />
-    <meta property="og:images" content="/assets/images/mv_ogp_01.jpg" />
-    <meta property="og:site_name" content="Kira-meki" />
-    <link rel="stylesheet" href="/assets/style/main.css" />
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <meta property="og:title" content="肌のうるおい、煌めく Kirameki Cream | Kira-meki" >
+    <meta property="og:description" content="Kirameki Creamはお肌のうるおいを美しく保ちます。" >
+    <meta property="og:type" content="article" >
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:site_name" content="Kira-meki" >
+    <link rel="stylesheet" href="/assets/style/main.css" >
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" >
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="/assets/script/main.js"></script>
+
     <!-- Slick CSS & JS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" >
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Noto Serif JP Regular, Medium, SemiBold -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Marcellus フォント -->
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <!-- EB Garamond フォント -->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <main>
+        <!-- メインビジュアル -->
         <section class="cover">
             <div class="cover__container">
-                <a href="/" class="cover__link">
+                <a href="#" class="cover__link">
                     <picture>
-                        <source media="(min-width: 768px)" srcset="/assets/images/header_logo_pc.svg"
-                            alt="ヘッダーロゴ Kira-meki" />
-                        <img src="assets/images/header_logo_sp.svg" class="cover__image" alt="" />
+                        <source media="(min-width: 768px)" srcset="/assets/image/header_logo_pc.svg">
+                        <img src="assets/image/header_logo_sp.svg" class="cover__image" alt="Kira meki" >
                     </picture>
                 </a>
                 <h1 class="cover__title">
-                    <p class="cover__title--english">
-                        <span>Kirameki Cream</span>
-                    </p>
-                    <p class="cover__title--japanese">肌のうるおい、煌めく。</p>
+                    <span class="cover__title--english">Kirameki Cream</span>
+                    <span class="cover__title--japanese">肌のうるおい、煌めく。</span>
                 </h1>
             </div>
         </section>
+        <!-- 申し込みエリア -->
         <div class="action action-cover-next">
             <div class="action__container">
                 <p class="action__title">
                     キラメキクリーム<br>
                     <span class="action__price">税込</span> <span class="action__price--4000">4,000円</span>
                 </p>
-                <a href="/" class="action__btn action__btn--online">オンラインショップへ</a>
+                <a href="#" class="action__btn action__btn--online">オンラインショップへ</a>
                 <form action="/cart/" method="post" class="action__form">
                     <button type="submit" class="action__btn action__btn--buy">購入する</button>
                 </form>
             </div>
         </div>
+        <!-- 商品説明 -->
         <section class="features">
             <div class="features__container">
-                <h2 class="features__title">
-                    <span class="features__title-english">Keep Your Skin Beautiful.</span>
-                    <span class="features__title-japanese">お肌を美しく保つ</span>
-                </h2>
-                <p class="features__description">
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-                </p>
+                <div>
+                    <h2 class="features__title">
+                        <span class="features__title-english">Keep Your Skin Beautiful.</span>
+                        <span class="features__title-japanese">お肌を美しく保つ</span>
+                    </h2>
+                    <p class="features__description">
+                        ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                    </p>
+                </div>
             </div>
         </section>
+        <!-- お客様の声 -->
         <section class="reviews">
             <div class="reviews__container">
                 <h2 class="reviews__title">
-                    <p class="reviews__title-english">Voices</p>
-                    <p class="reviews__title-japanese">お客様の声</p>
+                    <span class="reviews__title-english">Voices</span>
+                    <span class="reviews__title-japanese">お客様の声</span>
                 </h2>
                 <div class="reviews__items">
                     <div class="reviews__item is-active">
                         <picture>
-                            <source media="(min-width: 768px)" srcset="/assets/images/reviews_a_pc.png" alt="" />
-                            <img src="assets/images/reviews_a_sp.png" class="reviews__customer-icon" alt="" />
+                            <source media="(min-width: 768px)" srcset="/assets/image/reviews_a_pc.png">
+                            <img src="assets/image/reviews_a_sp.png" class="reviews__customer-icon" alt="" >
                         </picture>
                         <p class="reviews__name">Aさん</p>
                         <p class="reviews__review">
@@ -85,8 +95,8 @@
                     </div>
                     <div class="reviews__item">
                         <picture>
-                            <source media="(min-width: 768px)" srcset="/assets/images/reviews_b_pc.png" alt="" />
-                            <img src="assets/images/reviews_b_sp.png" class="reviews__customer-icon" />
+                            <source media="(min-width: 768px)" srcset="/assets/image/reviews_b_pc.png">
+                            <img src="assets/image/reviews_b_sp.png" class="reviews__customer-icon" alt="">
                         </picture>
                         <p class="reviews__name">Bさん</p>
                         <p class="reviews__review">
@@ -95,8 +105,8 @@
                     </div>
                     <div class="reviews__item">
                         <picture>
-                            <source media="(min-width: 768px)" srcset="/assets/images/reviews_c_pc.png" alt="" />
-                            <img src="assets/images/reviews_c_sp.png" class="reviews__customer-icon" alt="" />
+                            <source media="(min-width: 768px)" srcset="/assets/image/reviews_c_pc.png">
+                            <img src="assets/image/reviews_c_sp.png" class="reviews__customer-icon" alt="" >
                         </picture>
                         <p class="reviews__name">Cさん</p>
                         <p class="reviews__review">
@@ -105,8 +115,8 @@
                     </div>
                     <div class="reviews__item">
                         <picture>
-                            <source media="(min-width: 768px)" srcset="/assets/images/reviews_d_pc.png" alt="" />
-                            <img src="assets/images/reviews_d_sp.png" class="reviews__customer-icon" alt="" />
+                            <source media="(min-width: 768px)" srcset="/assets/image/reviews_d_pc.png">
+                            <img src="assets/image/reviews_d_sp.png" class="reviews__customer-icon" alt="" >
                         </picture>
                         <p class="reviews__name">Dさん</p>
                         <p class="reviews__review">
@@ -115,8 +125,8 @@
                     </div>
                     <div class="reviews__item">
                         <picture>
-                            <source media="(min-width: 768px)" srcset="/assets/images/reviews_e_pc.png" alt="" />
-                            <img src="assets/images/reviews_e_sp.png" class="reviews__customer-icon" alt="" />
+                            <source media="(min-width: 768px)" srcset="/assets/image/reviews_e_pc.png">
+                            <img src="assets/image/reviews_e_sp.png" class="reviews__customer-icon" alt="" >
                         </picture>
                         <p class="reviews__name">Eさん</p>
                         <p class="reviews__review">
@@ -125,8 +135,8 @@
                     </div>
                     <div class="reviews__item">
                         <picture>
-                            <source media="(min-width: 768px)" srcset="/assets/images/reviews_f_pc.png" alt="" />
-                            <img src="assets/images/reviews_f_sp.png" class="reviews__customer-icon" alt="" />
+                            <source media="(min-width: 768px)" srcset="/assets/image/reviews_f_pc.png">
+                            <img src="assets/image/reviews_f_sp.png" class="reviews__customer-icon" alt="" >
                         </picture>
                         <p class="reviews__name">Fさん</p>
                         <p class="reviews__review">
@@ -136,19 +146,17 @@
                 </div>
             </div>
         </section>
+        <!-- FAQ -->
         <section class="faq">
             <div class="faq__container">
                 <h2 class="faq__title">
-                    <p class="faq__title-english">Q&A</p>
-                    <p class="faq__title-japanese">よくあるご質問</p>
+                    <span class="faq__title-english">Q&A</span>
+                    <span class="faq__title-japanese">よくあるご質問</span>
                 </h2>
                 <div class="faq__accordion">
-                    <div class="faq__accordion-trigger" aria-expanded="false">
-                        <span class="faq__text--q faq__text">Q.</span>
-                        <span class="faq__text--question faq__text">テキストが入ります。テキストが入ります。テキストが入ります。</span>
-                        <svg class="faq__accordion-icon" viewBox="0 0 24 24">
-                            <path d="M6 9l6 6 6-6"></path>
-                        </svg>
+                    <div class="faq__accordion-trigger" role="button" aria-expanded="false">
+                            <span class="faq__text--q faq__text">Q.</span><span class="faq__text--question faq__text">テキストが入ります。テキストが入ります。テキストが入ります。</span>
+                            <img src="assets/image/caret-down-fill.svg" class="faq__accordion-icon" alt="">
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -160,12 +168,10 @@
                     </div>
                 </div>
                 <div class="faq__accordion">
-                    <div class="faq__accordion-trigger" aria-expanded="false">
+                    <div class="faq__accordion-trigger" role="button" aria-expanded="false">
                         <span class="faq__text--q faq__text">Q.</span>
                         <span class="faq__text--question faq__text">テキストが入ります。テキストが入ります。テキストが入ります。</span>
-                        <svg class="faq__accordion-icon" viewBox="0 0 24 24">
-                            <path d="M6 9l6 6 6-6"></path>
-                        </svg>
+                            <img src="assets/image/caret-down-fill.svg" class="faq__accordion-icon" alt="" >
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -177,12 +183,10 @@
                     </div>
                 </div>
                 <div class="faq__accordion">
-                    <div class="faq__accordion-trigger" aria-expanded="false">
+                    <div class="faq__accordion-trigger" role="button" aria-expanded="false">
                         <span class="faq__text--q faq__text">Q.</span>
                         <span class="faq__text--question faq__text">テキストが入ります。テキストが入ります。テキストが入ります。</span>
-                        <svg class="faq__accordion-icon" viewBox="0 0 24 24">
-                            <path d="M6 9l6 6 6-6"></path>
-                        </svg>
+                            <img src="assets/image/caret-down-fill.svg" class="faq__accordion-icon" alt="" >
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -194,12 +198,10 @@
                     </div>
                 </div>
                 <div class="faq__accordion">
-                    <div class="faq__accordion-trigger" aria-expanded="false">
+                    <div class="faq__accordion-trigger" role="button" aria-expanded="false">
                         <span class="faq__text--q faq__text">Q.</span>
                         <span class="faq__text--question faq__text">テキストが入ります。テキストが入ります。テキストが入ります。</span>
-                        <svg class="faq__accordion-icon" viewBox="0 0 24 24">
-                            <path d="M6 9l6 6 6-6"></path>
-                        </svg>
+                            <img src="assets/image/caret-down-fill.svg" class="faq__accordion-icon" alt="" >
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -211,12 +213,10 @@
                     </div>
                 </div>
                 <div class="faq__accordion">
-                    <div class="faq__accordion-trigger" aria-expanded="false">
+                    <div class="faq__accordion-trigger" role="button" aria-expanded="false">
                         <span class="faq__text--q faq__text">Q.</span>
                         <span class="faq__text--question faq__text">テキストが入ります。テキストが入ります。テキストが入ります。</span>
-                        <svg class="faq__accordion-icon" viewBox="0 0 24 24">
-                            <path d="M6 9l6 6 6-6"></path>
-                        </svg>
+                            <img src="assets/image/caret-down-fill.svg" class="faq__accordion-icon" alt="" >
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -227,32 +227,31 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
+        <!-- 申し込みエリア -->
         <div class="action action-faq-next">
             <div class="action__container">
                 <p class="action__title">
                     キラメキクリーム<br>
                     <span class="action__price">税込</span> <span class="action__price--4000">4,000円</span>
                 </p>
-                <a href="/" class="action__btn action__btn--online">オンラインショップへ</a>
+                <a href="#" class="action__btn action__btn--online">オンラインショップへ</a>
                 <form action="/cart/" method="post" class="action__form">
                     <button type="submit" class="action__btn action__btn--buy">購入する</button>
                 </form>
             </div>
         </div>
-
-        <!-- stickyが効くようにmain内に置く -->
+        <!-- トップへ戻るボタン -->
         <div class="pagetop">
-            <img class="pagetop__img" src="/assets/images/arrow_up_short_sp.svg" alt="" />
+            <img class="pagetop__img" src="/assets/image/arrow_up_short_sp.svg" alt="" >
         </div>
-
+        <!-- フッター -->
         <footer class="footer">
             <div class="footer__container">
                 <div class="footer__site-name">
-                    <a href="/" class="footer__link">
-                        <img class="footer__logo" src="/assets/images/footer_logo_sp.svg" alt="フッターロゴ Kira-meki" />
+                    <a href="#" class="footer__link">
+                        <img class="footer__logo" src="/assets/image/footer_logo_sp.svg" alt="Kira meki" >
                     </a>
                 </div>
                 <nav class="footer__nav">

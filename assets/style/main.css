@@ -1,16 +1,14 @@
 @charset "UTF-8";
-/* Noto Serif JP Regular, Medium, SemiBold をインポート */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&display=swap");
-/* Marcellus フォントをインポート */
-@import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
-/* EB Garamond フォントをインポート */
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
 /* 共通 */
 body {
   margin: 0 auto;
   font-family: "Noto Serif JP", serif;
   line-height: 1.75;
   color: #333;
+}
+
+main {
+  width: 100%;
 }
 
 a {
@@ -31,28 +29,30 @@ li {
 /* 変数 */
 /* メインビジュアル */
 .cover {
-  background-image: url("/assets/images/main_visual_sp.jpg");
+  background-image: url("/assets/image/main_visual_sp.jpg");
   background-size: 100%;
   background-position: top center;
   height: 140.5128205128vw;
-  padding: 4.8717948718vw 0 0 0;
-  margin-bottom: 14.8717948718vw;
+  padding: 4.8717948718vw 0 14.8717948718vw 0;
 }
 @media screen and (min-width: 768px) {
   .cover {
-    background-image: url("/assets/images/main_visual_pc.jpg");
+    background-image: url("/assets/image/main_visual_pc.jpg");
     background-size: cover;
+    background-position: center center;
     height: 60vw;
     padding: 3.0833333333vw 0 0 0;
-    margin-bottom: 4vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .cover {
     height: 45rem;
     padding: 2.3125rem 0 0 0;
-    margin-bottom: 3rem;
   }
+}
+.cover__container {
+  max-width: 1200px;
+  margin-inline: auto;
 }
 .cover__link {
   width: 35.8974358974vw;
@@ -79,19 +79,16 @@ li {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  margin: 95.3846153846vw 0 0 5.8205128205vw;
+  margin: 95.3846153846vw 0 0 5.8974358974vw;
 }
 @media screen and (min-width: 768px) {
   .cover__title {
-    justify-content: center;
-    margin: 17.1666666667vw 0 0 18.5833333333vw;
+    margin: 17.1666666667vw 0 0 6.25vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .cover__title {
-    justify-content: center;
-    margin: 12.875rem 0 0 13.9375rem;
+    margin: 12.875rem 0 0 4.6875rem;
   }
 }
 .cover__title--english {
@@ -139,21 +136,21 @@ li {
   }
 }
 
-/* 申し込み */
+/* 申し込みエリア */
 .action {
   font-size: 4.6153846154vw;
 }
 .action-cover-next {
-  margin: 0 0 12.8205128205vw 0;
+  padding: 14.8717948718vw 0 12.8205128205vw 0;
 }
 @media screen and (min-width: 768px) {
   .action-cover-next {
-    margin: 0 0 4vw 0;
+    padding: 4vw 0 4vw 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .action-cover-next {
-    margin: 0 0 3rem 0;
+    padding: 3rem 0 3rem 0;
   }
 }
 .action-faq-next {
@@ -313,55 +310,53 @@ li {
 
 /* 商品説明 */
 .features {
-  background-image: url("/assets/images/keep_your_skin_sp.jpg");
+  background-image: url("/assets/image/keep_your_skin_sp.jpg");
   background-size: cover;
   background-position: center center;
-  padding: 11.0256410256vw 0 0 0;
+  padding: 11.0256410256vw 0 11.2820512821vw 0;
   color: #FFF;
   height: 174.358974359vw;
-  margin-bottom: 11.2820512821vw;
 }
 @media screen and (min-width: 768px) {
   .features {
-    background-image: url("/assets/images/keep_your_skin_pc.jpg");
-    padding: 5.4166666667vw 21.1666666667vw 0 0;
+    background-image: url("/assets/image/keep_your_skin_pc.jpg");
+    padding: 5.4166666667vw 0 6.1666666667vw 0;
     height: 45.8333333333vw;
-    margin-bottom: 4.625rem;
   }
 }
 @media screen and (min-width: 1200px) {
   .features {
-    padding: 7.8125rem 12.5rem 0 0;
+    padding: 7.8125rem 0 4.625rem 0;
     height: 34.375rem;
-    margin-bottom: 4.625rem;
   }
 }
 .features__container {
   text-align: left;
-  width: 91.7948717949vw;
-  margin-inline: auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: flex-end;
   line-height: 1.3;
+  margin-inline: auto;
+  padding: 0 4.1025641026vw;
 }
 @media screen and (min-width: 768px) {
   .features__container {
-    width: 38.9166666667vw;
-    margin-inline: 0;
-    margin-left: auto;
+    padding: 0 7.75vw 0 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .features__container {
-    width: 29.1875rem;
+    padding: 0 5.8125rem 0 0;
   }
 }
 .features__title {
   padding-bottom: 4.8717948718vw;
   text-align: center;
+  font-weight: bold;
 }
 @media screen and (min-width: 768px) {
   .features__title {
     padding-bottom: 0;
-    text-align: left;
   }
 }
 @media screen and (min-width: 768px) {
@@ -413,6 +408,7 @@ li {
 @media screen and (min-width: 768px) {
   .features__description {
     font-size: 1.1666666667vw;
+    width: 35.8333333333vw;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -424,19 +420,17 @@ li {
 
 /* お客様の声 */
 .reviews {
-  margin: 0 0 19.2307692308vw 0;
-  padding: 0 3.3333333333vw;
+  padding: 11.2820512821vw 3.3333333333vw 19.2307692308vw 3.3333333333vw;
   line-height: 1.7;
-  /* ドットの基本スタイル */
 }
 @media screen and (min-width: 768px) {
   .reviews {
-    margin: 0 0 8.6666666667vw 0;
+    padding: 6.25vw 0 8.6666666667vw 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .reviews {
-    margin: 0 0 6.5rem 0;
+    padding: 4.6875rem 0 6.5rem 0;
   }
 }
 .reviews .is-active {
@@ -473,6 +467,7 @@ li {
   font-size: 7.6923076923vw;
   font-family: "EB Garamond", serif;
   letter-spacing: 0.5128205128vw;
+  display: block;
 }
 @media screen and (min-width: 768px) {
   .reviews__title-english {
@@ -530,12 +525,12 @@ li {
 }
 @media screen and (min-width: 1200px) {
   .reviews__customer-icon {
-    max-width: px2rem(80);
+    max-width: 5rem;
     width: 6.25rem;
   }
 }
 .reviews__items {
-  max-width: 100vw; /* スマホサイズに合わせてお好みで */
+  max-width: 100vw;
 }
 @media screen and (min-width: 768px) {
   .reviews__items {
@@ -722,6 +717,7 @@ li {
 .faq__title-english {
   font-size: 7.6923076923vw;
   line-height: 1.5;
+  display: block;
 }
 @media screen and (min-width: 768px) {
   .faq__title-english {
@@ -818,19 +814,19 @@ li {
 }
 .faq__accordion-icon {
   transition: transform 0.5s;
-  width: 8.9743589744vw;
-  margin-bottom: 2.9487179487vw;
+  width: 2.5641025641vw;
+  margin: 0 2.2307692308vw 2.9487179487vw 0;
 }
 @media screen and (min-width: 768px) {
   .faq__accordion-icon {
-    width: 2.9166666667vw;
+    width: 1vw;
     margin: 0.375vw 0 0 3.3333333333vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .faq__accordion-icon {
-    width: 2.1875rem;
-    margin: px2rem(4.5) 0 0 px2rem(40);
+    width: 0.75rem;
+    margin: 0 0 0.5rem 3.9375rem;
   }
 }
 .faq__question {
