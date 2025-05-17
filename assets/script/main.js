@@ -33,8 +33,8 @@ $(() =>  {
         ]
     });
     function showItem(index, items) {
-        items.removeClass('is-active');
-        items.eq(index).addClass('is-active');
+        items.removeClass('reviews__is-active');
+        items.eq(index).addClass('reviews__is-active');
     }
     $('.reviews__arrow--right').on('click', function () {
         current = (current + 1) % $items.length;

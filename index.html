@@ -13,22 +13,24 @@
     <meta property="og:type" content="article" >
     <meta property="og:url" content="https://example.com">
     <meta property="og:site_name" content="Kira-meki" >
-    <link rel="stylesheet" href="/assets/style/main.css" >
+    
+    <!-- reset CSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" >
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Marcellus&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" >
+
+    <link rel="stylesheet" href="/assets/style/main.css" >
+
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="/assets/script/main.js"></script>
-
-    <!-- Slick CSS & JS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" >
+    <!-- Slick & JS -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-    <!-- Noto Serif JP Regular, Medium, SemiBold -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
-    <!-- Marcellus フォント -->
-    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
-    <!-- EB Garamond フォント -->
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -39,22 +41,26 @@
                 <a href="#" class="cover__link">
                     <picture>
                         <source media="(min-width: 768px)" srcset="/assets/image/header_logo_pc.svg">
-                        <img src="assets/image/header_logo_sp.svg" class="cover__image" alt="Kira meki" >
+                        <img src="/assets/image/header_logo_sp.svg" class="cover__image" alt="Kira-meki" >
                     </picture>
                 </a>
                 <h1 class="cover__title">
                     <span class="cover__title--english">Kirameki Cream</span>
-                    <span class="cover__title--japanese">肌のうるおい、煌めく。</span>
                 </h1>
+                <p class="cover__title--japanese">肌のうるおい、煌めく。</p>
             </div>
         </section>
         <!-- 申し込みエリア -->
-        <div class="action action-cover-next">
+        <div class="action action--cover-next">
             <div class="action__container">
-                <p class="action__title">
-                    キラメキクリーム<br>
-                    <span class="action__price">税込</span> <span class="action__price--4000">4,000円</span>
-                </p>
+                <div class="action__content">
+                    <p class="action__item--name">
+                        キラメキクリーム<br>
+                    </p>
+                    <p class="action__item--price">
+                        <span class="action__price">税込</span>4,000円
+                    </p>
+                </div>
                 <a href="#" class="action__btn action__btn--online">オンラインショップへ</a>
                 <form action="/cart/" method="post" class="action__form">
                     <button type="submit" class="action__btn action__btn--buy">購入する</button>
@@ -67,8 +73,8 @@
                 <div>
                     <h2 class="features__title">
                         <span class="features__title-english">Keep Your Skin Beautiful.</span>
-                        <span class="features__title-japanese">お肌を美しく保つ</span>
                     </h2>
+                    <p class="features__title-japanese">お肌を美しく保つ</p>
                     <p class="features__description">
                         ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
                     </p>
@@ -80,13 +86,13 @@
             <div class="reviews__container">
                 <h2 class="reviews__title">
                     <span class="reviews__title-english">Voices</span>
-                    <span class="reviews__title-japanese">お客様の声</span>
                 </h2>
+                <p class="reviews__title-japanese">お客様の声</p>
                 <div class="reviews__items">
-                    <div class="reviews__item is-active">
+                    <div class="reviews__item reviews__is-active">
                         <picture>
                             <source media="(min-width: 768px)" srcset="/assets/image/reviews_a_pc.png">
-                            <img src="assets/image/reviews_a_sp.png" class="reviews__customer-icon" alt="" >
+                            <img src="/assets/image/reviews_a_sp.png" class="reviews__customer-icon" alt="" >
                         </picture>
                         <p class="reviews__name">Aさん</p>
                         <p class="reviews__review">
@@ -96,7 +102,7 @@
                     <div class="reviews__item">
                         <picture>
                             <source media="(min-width: 768px)" srcset="/assets/image/reviews_b_pc.png">
-                            <img src="assets/image/reviews_b_sp.png" class="reviews__customer-icon" alt="">
+                            <img src="/assets/image/reviews_b_sp.png" class="reviews__customer-icon" alt="">
                         </picture>
                         <p class="reviews__name">Bさん</p>
                         <p class="reviews__review">
@@ -106,7 +112,7 @@
                     <div class="reviews__item">
                         <picture>
                             <source media="(min-width: 768px)" srcset="/assets/image/reviews_c_pc.png">
-                            <img src="assets/image/reviews_c_sp.png" class="reviews__customer-icon" alt="" >
+                            <img src="/assets/image/reviews_c_sp.png" class="reviews__customer-icon" alt="" >
                         </picture>
                         <p class="reviews__name">Cさん</p>
                         <p class="reviews__review">
@@ -116,7 +122,7 @@
                     <div class="reviews__item">
                         <picture>
                             <source media="(min-width: 768px)" srcset="/assets/image/reviews_d_pc.png">
-                            <img src="assets/image/reviews_d_sp.png" class="reviews__customer-icon" alt="" >
+                            <img src="/assets/image/reviews_d_sp.png" class="reviews__customer-icon" alt="" >
                         </picture>
                         <p class="reviews__name">Dさん</p>
                         <p class="reviews__review">
@@ -126,7 +132,7 @@
                     <div class="reviews__item">
                         <picture>
                             <source media="(min-width: 768px)" srcset="/assets/image/reviews_e_pc.png">
-                            <img src="assets/image/reviews_e_sp.png" class="reviews__customer-icon" alt="" >
+                            <img src="/assets/image/reviews_e_sp.png" class="reviews__customer-icon" alt="" >
                         </picture>
                         <p class="reviews__name">Eさん</p>
                         <p class="reviews__review">
@@ -136,7 +142,7 @@
                     <div class="reviews__item">
                         <picture>
                             <source media="(min-width: 768px)" srcset="/assets/image/reviews_f_pc.png">
-                            <img src="assets/image/reviews_f_sp.png" class="reviews__customer-icon" alt="" >
+                            <img src="/assets/image/reviews_f_sp.png" class="reviews__customer-icon" alt="" >
                         </picture>
                         <p class="reviews__name">Fさん</p>
                         <p class="reviews__review">
@@ -151,12 +157,12 @@
             <div class="faq__container">
                 <h2 class="faq__title">
                     <span class="faq__title-english">Q&A</span>
-                    <span class="faq__title-japanese">よくあるご質問</span>
                 </h2>
+                <p class="faq__title-japanese">よくあるご質問</p>
                 <div class="faq__accordion">
                     <div class="faq__accordion-trigger" role="button" aria-expanded="false">
                             <span class="faq__text--q faq__text">Q.</span><span class="faq__text--question faq__text">テキストが入ります。テキストが入ります。テキストが入ります。</span>
-                            <img src="assets/image/caret-down-fill.svg" class="faq__accordion-icon" alt="">
+                            <img src="/assets/image/caret-down-fill.svg" class="faq__accordion-icon" alt="">
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -171,7 +177,7 @@
                     <div class="faq__accordion-trigger" role="button" aria-expanded="false">
                         <span class="faq__text--q faq__text">Q.</span>
                         <span class="faq__text--question faq__text">テキストが入ります。テキストが入ります。テキストが入ります。</span>
-                            <img src="assets/image/caret-down-fill.svg" class="faq__accordion-icon" alt="" >
+                            <img src="/assets/image/caret-down-fill.svg" class="faq__accordion-icon" alt="" >
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -186,7 +192,7 @@
                     <div class="faq__accordion-trigger" role="button" aria-expanded="false">
                         <span class="faq__text--q faq__text">Q.</span>
                         <span class="faq__text--question faq__text">テキストが入ります。テキストが入ります。テキストが入ります。</span>
-                            <img src="assets/image/caret-down-fill.svg" class="faq__accordion-icon" alt="" >
+                            <img src="/assets/image/caret-down-fill.svg" class="faq__accordion-icon" alt="" >
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -201,7 +207,7 @@
                     <div class="faq__accordion-trigger" role="button" aria-expanded="false">
                         <span class="faq__text--q faq__text">Q.</span>
                         <span class="faq__text--question faq__text">テキストが入ります。テキストが入ります。テキストが入ります。</span>
-                            <img src="assets/image/caret-down-fill.svg" class="faq__accordion-icon" alt="" >
+                            <img src="/assets/image/caret-down-fill.svg" class="faq__accordion-icon" alt="" >
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -216,7 +222,7 @@
                     <div class="faq__accordion-trigger" role="button" aria-expanded="false">
                         <span class="faq__text--q faq__text">Q.</span>
                         <span class="faq__text--question faq__text">テキストが入ります。テキストが入ります。テキストが入ります。</span>
-                            <img src="assets/image/caret-down-fill.svg" class="faq__accordion-icon" alt="" >
+                            <img src="/assets/image/caret-down-fill.svg" class="faq__accordion-icon" alt="" >
                     </div>
                     <div class="faq__accordion-content">
                         <div class="faq__accordion-body">
@@ -230,12 +236,16 @@
             </div>
         </section>
         <!-- 申し込みエリア -->
-        <div class="action action-faq-next">
+        <div class="action action--faq-next">
             <div class="action__container">
-                <p class="action__title">
-                    キラメキクリーム<br>
-                    <span class="action__price">税込</span> <span class="action__price--4000">4,000円</span>
-                </p>
+                <div class="action__content">
+                    <p class="action__item--name">
+                        キラメキクリーム<br>
+                    </p>
+                    <p class="action__item--price">
+                        <span class="action__price">税込</span>4,000円
+                    </p>
+                </div>
                 <a href="#" class="action__btn action__btn--online">オンラインショップへ</a>
                 <form action="/cart/" method="post" class="action__form">
                     <button type="submit" class="action__btn action__btn--buy">購入する</button>
@@ -251,7 +261,7 @@
             <div class="footer__container">
                 <div class="footer__site-name">
                     <a href="#" class="footer__link">
-                        <img class="footer__logo" src="/assets/image/footer_logo_sp.svg" alt="Kira meki" >
+                        <img class="footer__logo" src="/assets/image/footer_logo_sp.svg" alt="Kira-meki" >
                     </a>
                 </div>
                 <nav class="footer__nav">

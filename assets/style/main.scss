@@ -105,7 +105,7 @@ li {
     list-style: none;
 }
 
-/* 変数 */
+// 変数
 @mixin d-flex-justify-space-between {
     display: flex;
     justify-content: space-between;
@@ -129,11 +129,11 @@ li {
         background-size: cover;
         background-position: center center;
         height: vwt(720);
-        padding: vwt(37) 0 0 0;
+        padding: vwt(30.6) 0 0 0;
     }
     @include mq(lg) {
         height: px2Rem(720);
-        padding: px2Rem(37) 0 0 0;
+        padding: px2Rem(30.6) 0 0 0;
     }
 
     &__container {
@@ -159,6 +159,12 @@ li {
 
     &__image {
         width: 100%;
+        @include mq() {
+            padding-right: vwt(3.1);
+        }
+        @include mq(lg) {
+            padding-right: px2Rem(3.1);
+        }
     }
 
     &__title {
@@ -168,10 +174,10 @@ li {
         margin: vw(372) 0 0 vw(23);
 
         @include mq() {
-            margin: vwt(206) 0 0 vwt(75);
+            margin: vwt(211.6) 0 0 vwt(73.4);
         }
         @include mq(lg) {
-            margin: px2Rem(206) 0 0 px2Rem(75);
+            margin: px2Rem(211.6) 0 0 px2Rem(73.4);
         }
     }
 
@@ -180,16 +186,16 @@ li {
         font-family: 'Marcellus', serif;
         letter-spacing: 0.3em;
         font-weight: normal;
-        line-height: 1.2;
+        line-height: 1.24390243902;
         width: vw(246);
-        margin-bottom: vw(10);
+        margin-bottom: vw(4.54);
 
         @include mq() {
             font-size: vwt(50);
             letter-spacing: vwt(14.7);
             width: vwt(364);
             margin-bottom: 0;
-            line-height: 1.3;
+            line-height: 1.36;
         }
         @include mq(lg) {
             font-size: px2Rem(50);
@@ -202,15 +208,19 @@ li {
         letter-spacing: vw(6);
         font-size: vw(20);
         font-weight: normal;
-        line-height: 1;
+        line-height: 1.2;
+        margin-left: vw(23);
         @include mq() {
             font-size: vwt(25);
-            letter-spacing: vwt(7);
-            line-height: 2;
+            letter-spacing: vwt(7.32);
+            margin-left: vwt(73.4);
+            margin-top: vwt(2.2);
         }
         @include mq(lg) {
             font-size: px2Rem(25);
-            letter-spacing: px2Rem(7);
+            letter-spacing: px2Rem(7.32);
+            margin-left: px2Rem(73.4);
+            margin-top: px2Rem(2.2);
         }
     }
 }
@@ -218,8 +228,8 @@ li {
 /* 申し込みエリア */
 .action {
     font-size: vw(18);
-    &-cover-next {
-        padding: vw(58) 0 vw(50) 0;
+    &--cover-next {
+        padding: vw(58.78) 0 vw(50) 0;
         @include mq() {
             padding: vwt(48) 0 vwt(48) 0;
         }
@@ -228,14 +238,14 @@ li {
         }
     }
 
-    &-faq-next {
-        margin: 0 0 vw(10) 0;
+    &--faq-next {
+        margin: 0 0 vw(9.95) 0;
 
         @include mq() {
-            margin: 0 0 vwt(10) 0;
+            margin: 0 0 vwt(8.27) 0;
         }
         @include mq(lg) {
-            margin: 0 0 px2Rem(10) 0;
+            margin: 0 0 px2Rem(8.27) 0;
         }
     }
     
@@ -244,58 +254,72 @@ li {
         text-align: center;
         width: vw(358);
         margin-inline: auto;
-        padding: vw(20) vw(28) vw(35);
+        padding: vw(21.17) vw(28) vw(35);
         @include mq() {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
             width: vwt(1000);
             height: vwt(146);
-            padding: vwt(40) vwt(40) vwt(41) vwt(10);
+            padding: vwt(41.6) vwt(40) vwt(41) vwt(37.2);
         }
         @include mq(lg) {
             width: px2Rem(1000);
-            padding: px2Rem(40) px2Rem(40) px2Rem(41) px2Rem(10);
-            height: px2Rem(146)
+            padding: px2Rem(41.6) px2Rem(40) px2Rem(41) px2Rem(37.2);
+            height: px2Rem(146);
         }
     }
 
-    &__title {
+    &__content {
+        @include mq() {
+            margin-right: vwt(50.7);
+        }
+        @include mq(lg) {
+            margin-right: px2Rem(50.7);
+        }
+    }
+
+    &__item--name {
         font-size: vw(18);
         margin-bottom: vw(6.9);
-        line-height: 1.5;
-        margin-bottom: vw(18);
-        letter-spacing: 1.3px;
-
+        line-height: 1.22222222222;
+        letter-spacing: vw(1.3);
+        font-weight: 600;
         @include mq() {
             font-size: vwt(24);
             text-align: left;
-            margin: 0 vwt(60) 0 vwt(40);
+            margin: 0;
+            letter-spacing: vwt(2.2);
         }
         @include mq(lg) {
             font-size: px2Rem(24);
             text-align: left;
-            margin: 0 px2Rem(60) 0 px2Rem(40);
+            letter-spacing: px2Rem(2.2);
         }
     }
 
-    &__price {
+    &__item--price {
         font-size: vw(14);
-        margin: vw(12) 0 vw(21);
+        margin: vw(10) 0 vw(21);
+        line-height: 1.21428571429;
+        letter-spacing: 1.3px;
         @include mq() {
             font-size: vwt(16);
+            margin: vwt(11.1615) 0 0 0;
+            text-align: left;
         }
         @include mq(lg) {
             font-size: px2Rem(16);
+            margin: px2Rem(11.1615) 0 0 0;
         }
-        &--4000 {
-            font-size: vw(14);
-            @include mq() {
-                font-size: vwt(16);
-            }
-            @include mq(lg) {
-                font-size: px2Rem(16);
-            }
+    }
+    &__price {
+        margin-right: vw(5.1);
+        @include mq() {
+            margin-right: vwt(5.1);
+        }
+        @include mq(lg) {
+            margin-right: px2Rem(5.1);
         }
     }
 
@@ -307,12 +331,12 @@ li {
         @include mq() {
             font-size: vwt(18);
             width: vwt(300);
-            padding: vwt(15) 0;
+            padding: vwt(13.4) 0;
         }
         @include mq(lg) {
             font-size: px2Rem(18);
             width: px2Rem(300);
-            padding: px2Rem(15) 0;
+            padding: px2Rem(13.4) 0;
         }
     }
 
@@ -368,7 +392,7 @@ li {
     background-image:  url("/assets/image/keep_your_skin_sp.jpg");
     background-size: cover;
     background-position: center center;
-    padding: vw(43) 0 vw(44) 0;
+    padding: vw(44) 0 vw(44) 0;
     color: #FFF;
     height: vw(680);
 
@@ -391,83 +415,82 @@ li {
         margin-inline: auto;
         padding: 0 vw(16);
         @include mq() {
-            padding: 0 vwt(93) 0 0;
+            padding: 0 vwt(91.4) 0 0;
         }
         @include mq(lg) {
-            padding: 0 px2Rem(93) 0 0;
+            padding: 0 px2Rem(91.4) 0 0;
         }
     }
 
     &__title {
-        padding-bottom: vw(19);
         text-align: center;
         font-weight: bold;
-
         @include mq() {
-            padding-bottom: 0;
+            text-align: left;
         }
         @include mq() {
-            margin-bottom: px2Rem(15);
         }
     }
 
     &__title-english {
         font-size: vw(30);
         font-family: 'EB Garamond', serif;
-        line-height: 1.6;
+        line-height: 1.5;
         display: block;
-        letter-spacing: vw(1.3);
-
         @include mq() {
             font-size: vwt(38);
-            letter-spacing: vwt(1.3);
+            line-height: 1.42105263158;
         }
         @include mq(lg) {
             font-size: px2Rem(38);
-            letter-spacing: px2Rem(1.3);
-            line-height: 1.6;
         }
     }
 
     &__title-japanese {
         line-height: 1.3;
-        text-align: center;
         font-size: vw(24);
         font-weight: normal;
+        text-align: center;
+        margin-bottom: vw(19);
         @include mq() {
             font-size: vwt(24);
+            margin-bottom: vwt(20.1);
             text-align: left;
         }
         @include mq(lg) {
             font-size: px2Rem(24);
+            margin-bottom: px2Rem(20.1);
         }
     }
 
     &__description {
         font-size: vw(14);
-        line-height: 2.28;
+        line-height: 2.28571428571;
+        letter-spacing: vw(-0.1);
         @include mq() {
             font-size: vwt(14);
-            width: vwt(430);
+            width: vwt(431.6);
+            letter-spacing: 0;
+            line-height: 2.28571428571;
         }
         @include mq(lg) {
             font-size: px2Rem(14);
-            width: px2Rem(430);
+            width: px2Rem(431.6);
         }
     }
 }
 
 /* お客様の声 */
 .reviews {
-    padding: vw(44) vw(13) vw(75) vw(13);
+    padding: vw(44) vw(13) vw(77.34) vw(13);
     line-height: 1.7;
     @include mq() {
-        padding: vwt(75) 0 vwt(104) 0;
+        padding: vwt(94.2) 0 vwt(113.6) 0;
     }
     @include mq(lg) {
-        padding: px2Rem(75) 0 px2Rem(104) 0;
+        padding: px2Rem(94.2) 0 px2Rem(113.6) 0;
     }
-    .is-active {
+    &__is-active {
         display: block;
     }
     &__container {
@@ -482,20 +505,20 @@ li {
     }
 
     &__title {
-        margin-bottom: vw(39);
         @include mq() {
-            margin-bottom: vwt(44);
+            line-height: 0.71111111111;
+            margin-bottom: vwt(25);
         }
         @include mq(lg) {
-            margin-bottom: px2Rem(44);
+            margin-bottom: px2Rem(25);
         }
     }
 
     &__title-english {
         font-size: vw(30);
         font-family: 'EB Garamond', serif;
-        letter-spacing: vw(2);
-        display: block;
+        letter-spacing: vw(1.61);
+        font-weight: bold;
         @include mq() {
             font-size: vwt(45);
             letter-spacing: vwt(2);
@@ -508,41 +531,46 @@ li {
     
     &__title-japanese {
         font-size: vw(16);
-        font-weight: normal;
-        line-height: 1.4;
-
+        font-weight: 600;
+        line-height: 1.1;
+        letter-spacing: vw(0.8);
+        font-family: 'EB Garamond', serif;
+        margin-bottom: vw(40);
         @include mq() {
             font-size: vwt(20);
+            margin-bottom: vwt(41.6);
+            letter-spacing: vwt(0.8);
         }
         @include mq(lg) {
             font-size: px2Rem(20);
+            margin-bottom: px2Rem(41.6);
+            letter-spacing: px2Rem(0.8);
         }
     }
 
     &__name {
         font-size: vw(14);
-        line-height: 2.9;
+        line-height: 2.4;
+        margin-bottom: vw(4.6);
         @include mq() {
             font-size: vwt(15);
-            margin: vwt(5) 0 0 0;
+            margin: vwt(1.8) 0 0 0;
+            line-height: 2.13333333333;
         }
         @include mq(lg) {
             font-size: px2Rem(15);
-            margin: px2Rem(5) 0 0 0;
+            margin: px2Rem(1.8) 0 0 0;
         }
     }
 
     &__customer-icon {
         width: 100%;
-        max-width: vw(80);
+        width: vw(80);
         margin-inline: auto;
         @include mq() {
-            max-width: vwt(80);
             width: vwt(100);
-
         }
         @include mq(lg) {
-            max-width: px2Rem(80);
             width: px2Rem(100);
         }
     }
@@ -563,16 +591,16 @@ li {
         box-sizing: border-box;
         line-height:2;
         margin: 0 vw(10);
-        padding: vw(23) vw(13) 0;
+        padding: vw(28.85) vw(13) 0;
         @include mq() {
-            padding: vwt(23) vwt(13) 0;
+            padding: vwt(42.2) vwt(13) 0;
             line-height:1.75;
-            margin: 0 vwt(10);
+            margin: 0 vwt(25);
         }
         @include mq(lg) {
-            padding: px2Rem(23) px2Rem(13) 0;
+            padding: px2Rem(42.2) px2Rem(13) 0;
             line-height:1.75;
-            margin: 0 px2Rem(10);
+            margin: 0 px2Rem(25);
         }
     }
 
@@ -580,14 +608,17 @@ li {
         font-size: vw(14);
         text-align: left;
         letter-spacing: vw(-0.2);
+        line-height: 2;
+        padding-left: vw(3.3);
         @include mq() {
             font-size: vwt(16);
             letter-spacing: 0;
-            margin: 0 vwt(30) vwt(30);
+            padding: 0 vwt(7);
+            line-height: 1.75;
         }
         @include mq(lg) {
             font-size: px2Rem(16);
-            margin: 0 px2Rem(30) px2Rem(30);
+            padding: 0 px2Rem(7);
         }
     }
 
@@ -647,8 +678,8 @@ li {
 
     &__arrow--left,
     &__arrow--right {
-        width: vw(35);
-        height: vw(35);
+        width: vw(32);
+        height: vw(32);
         cursor: pointer;
         @include mq() {
             width: vwt(55);
@@ -672,15 +703,15 @@ li {
 /* Q&A */
 .faq {
     background: linear-gradient(to right, #F4FFE8, #C6F0FE);
-    padding: vw(30) vw(15) vw(15.8);
+    padding: vw(30) vw(15) vw(13.07);
     margin-bottom: vw(50);
     @include mq() {
-        padding: vwt(38) vwt(30) vwt(22.5) vwt(30);
-        margin-bottom: vwt(50);
+        padding: vwt(36.4) vwt(30) vwt(11.3) vwt(30);
+        margin-bottom: vwt(48);
     }
     @include mq(lg) {
-        padding: px2Rem(38) px2Rem(30) px2Rem(22.5) px2Rem(30);
-        margin-bottom: px2Rem(50);
+        padding: px2Rem(36.4) px2Rem(30) px2Rem(11.3) px2Rem(30);
+        margin-bottom: px2Rem(48);
     }
 
     &__container {
@@ -695,13 +726,10 @@ li {
 
     &__title {
         text-align: center;
-        margin-bottom: vw(31.3);
         font-family: 'EB Garamond', serif;
         @include mq() {
-            margin-bottom: vwt(44);
         }
         @include mq(lg) {
-            margin-bottom: px2Rem(38);
         }
     }
 
@@ -709,37 +737,49 @@ li {
         font-size: vw(30);
         line-height: 1.5;
         display: block;
+        font-weight: bold;
+        letter-spacing: vw(1.6);
+        padding-left: vw(1.1);
         @include mq() {
             font-size: vwt(45);
+            letter-spacing: vwt(2.7);
         }
         @include mq(lg) {
             font-size: px2Rem(45);
+            letter-spacing: px2Rem(2.7);
         }
     }
 
     &__title-japanese {
         font-size: vw(16);
-        font-weight: normal;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: vw(0.8);
+        margin-bottom: vw(33.6);
         @include mq() {
             font-size: vwt(20);
+            margin-bottom: vwt(35.2);
+            letter-spacing: vwt(1);
         }
         @include mq(lg) {
             font-size: px2Rem(20);
+            margin-bottom: px2Rem(35.2);
+            letter-spacing: px2Rem(1);
         }
     }
 
     &__accordion {
         width: 100%;
         background: white;
-        margin-bottom: vw(20);
-        padding: vw(14) vw(10) vw(7) vw(17.4);
+        margin-bottom: vw(20.12);
+        padding: vw(11.66) vw(10) vw(9.35) vw(17.4);
         @include mq() {
             margin-bottom: vwt(25);
-            padding: 0 0 vwt(3) vwt(17.4);
+            padding: 0 0 vwt(7.8) vwt(17.4);
         }
         @include mq(lg) {
             margin-bottom: px2Rem(25);
-            padding: 0 0 px2Rem(3) px2Rem(17.4);
+            padding: 0 0 px2Rem(7.8) px2Rem(17.4);
         }
     }
     
@@ -759,9 +799,10 @@ li {
     &__accordion-content {
         max-height: 0;
         display: flex;
-        padding: vw(13) 0 0 0;
+        padding: vw(11.44) 0 0 0;
         overflow: hidden;
         background-color: #FFF;
+        line-height: 1.86666666667;
         transition: max-height 0.5s ease-in-out;
         @include mq() {
             padding: 0;
@@ -782,12 +823,12 @@ li {
     
     &__accordion-body {
         display: flex;
-        padding: 0 0 vw(30) 0;
+        padding: 0 0 vw(22.98) 0;
         @include mq() {
-            padding: 0 0 vwt(10) 0;
+            padding: 0 0 vwt(14.8) 0;
         }
         @include mq(lg) {
-            padding: 0 0 px2Rem(10) 0;
+            padding: 0 0 px2Rem(14.8) 0;
         }
     }
     
@@ -797,67 +838,79 @@ li {
         margin: 0 vw(8.7) vw(11.5) 0;
         @include mq() {
             width: vwt(12);
-            margin: vwt(4.5) 0 0 vwt(40);
+            margin: vwt(18.8) 0 vwt(8) vwt(63);
         }
         @include mq(lg) {
             width: px2Rem(12);
-            margin: 0 0 px2Rem(8) px2Rem(63);
+            margin: px2Rem(18.8) 0 px2Rem(8) px2Rem(63);
         }
     }
 
     &__question {
         display: flex
     }
+    
+    &__text--question {
+        line-height: 1.86666666667;
+    }
 
     &__text {
         display: block;
-    &--q {
-        font-size: vw(16);
-        font-family: 'EB Garamond', serif;
-        margin: 0 vw(10.4) vw(16) 0;
-        @include mq() {
-            font-size: vwt(18);
-            margin: vwt(19) vwt(10.4) vwt(16) vwt(10);
+
+        &--q {
+            font-size: vw(16);
+            font-family: 'EB Garamond', serif;
+            margin: 0 vw(10.4) vw(17.95) 0;
+            font-weight: 500;
+            @include mq() {
+                font-size: vwt(18);
+                margin: vwt(20.6) vwt(15.2) vwt(11.2) vwt(6.8);
+            }
+            @include mq(lg) {
+                font-size: px2Rem(18);
+                margin: px2Rem(20.6) px2Rem(15.2) px2Rem(11.2) px2Rem(6.8);
+            }
         }
-        @include mq(lg) {
-            font-size: px2Rem(18);
-            margin: px2Rem(19) px2Rem(10.4) px2Rem(16) px2Rem(10);
+        &--a {
+            font-size: vw(15);
+            margin: vw(2.93) vw(10.83) 0 0;
+            font-weight: 500;
+            font-family: 'EB Garamond', serif;
+            @include mq() {
+                font-size: vwt(18);
+                margin: vwt(3.2) vwt(16.4) 0 vwt(6.8);
+            }
+            @include mq(lg) {
+                font-size: px2Rem(18);
+                margin: px2Rem(3.2) px2Rem(16.4) 0 px2Rem(6.8);
+            }
         }
-    }
-    &--a {
-        font-size: vw(15);
-        margin: vw(8) vw(12) 0 0;
-        @include mq() {
-            font-size: vwt(15);
-            margin: 0 vwt(13.2) 0 vwt(10);
+        &--question {
+            font-size: vw(15);
+            font-weight: 500;
+            @include mq() {
+                font-size: vwt(15);
+                letter-spacing: vwt(-0.1);
+            }
+            @include mq(lg) {
+                font-size: px2Rem(15);
+                letter-spacing: px2Rem(-0.1);
+            }
         }
-        @include mq(lg) {
-            font-size: px2Rem(15);
-            margin: 0 px2Rem(13.2) 0 px2Rem(10);
+        &--answer {
+            font-size: vw(15);
+            line-height: 1.9;
+            padding: 0 0 0 0;
+            font-weight: 500;
+            @include mq() {
+                font-size: vwt(15);
+                padding: 0 vwt(10) 0 0;
+            }
+            @include mq(lg) {
+                font-size: px2Rem(15);
+                padding: 0 px2Rem(10) 0 0;
+            }
         }
-    }
-    &--question {
-        font-size: vw(15);
-        @include mq() {
-            font-size: vwt(15);
-        }
-        @include mq(lg) {
-            font-size: px2Rem(15);
-        }
-    }
-    &--answer {
-        font-size: vw(15);
-        line-height: 1.9;
-        padding: 0 0 0 0;
-        @include mq() {
-            font-size: vwt(15);
-            padding: 0 vwt(10) 0 0;
-        }
-        @include mq(lg) {
-            font-size: px2Rem(15);
-            padding: 0 px2Rem(10) 0 0;
-        }
-    }
     }
 }
 
@@ -868,10 +921,10 @@ li {
     background-color: #0071CE;
     position: relative;
     @include mq() {
-        padding: vwt(31) 0 vwt(34) 0;
+        padding: vwt(35) vwt(31.7) vwt(34) vwt(34);
     }
     @include mq(lg) {
-        padding: px2Rem(31) 0 px2Rem(34) 0;
+        padding: px2Rem(35) px2Rem(31.7) px2Rem(34) px2Rem(34);
     }
     &__link {
     display: block;
@@ -888,7 +941,7 @@ li {
         width: 100%;
     }
     &__container {
-        padding: vw(22) 0 vw(24) 0;
+        padding: vw(22.78) 0 vw(24) 0;
         @include mq() {
             display: flex;
             align-items: center;
@@ -896,10 +949,18 @@ li {
             padding: 0;
         }
     }
+    &__nav {
+        @include mq() {
+            padding-left: vwt(58.4);
+        }
+        @include mq(lg) {
+            padding-left: px2Rem(58.4);
+        }
+    }
     &__nav-list {
         display: flex;
         justify-content: space-evenly;
-        padding: vw(20.4) vw(4.7) vw(21.8) 0;
+        padding: vw(25.47) vw(11.33) vw(18);
         @include mq() {
             padding: 0;
         }
@@ -915,7 +976,7 @@ li {
         }
     }
     &__nav-link:hover {
-        text-decoration:underline;
+        opacity: 0.9;
     }
     &__nav-item {
         @include mq() {
@@ -927,11 +988,18 @@ li {
     }
     &__copyright {
         font-size: vw(11);
+        letter-spacing: vw(-0.5);
+        padding-left: vw(24.60);
         @include mq() {
             font-size: vwt(12);
+            letter-spacing: vwt(-0.6);
+            padding-left: 0;
+            padding-top: vwt(8.4);
         }
         @include mq(lg) {
             font-size: px2Rem(12);
+            letter-spacing: px2Rem(-0.6);
+            padding-top: px2Rem(8.4);
         }
     }
 }
@@ -956,6 +1024,7 @@ li {
         width: vwt(40);
         height: vwt(40);
         padding:vwt(13);
+        left: 87.3%;
     }
     @include mq(lg) {
         width: px2Rem(40);
