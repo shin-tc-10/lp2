@@ -10,8 +10,8 @@ $(() =>  {
         dots: true,
         infinite: true,
         speed: 500,
-        prevArrow: '<img class="slick-prev reviews__arrow--left" src="assets/image/arrow_left_circle_fill_sp.svg">',
-        nextArrow: '<img class="slick-next reviews__arrow--right" src="assets/image/arrow_right_circle_fill_sp.svg">',
+        prevArrow: '<img class="slick-prev reviews__arrow--left" src="assets/image/arrow_left_circle_fill.svg">',
+        nextArrow: '<img class="slick-next reviews__arrow--right" src="assets/image/arrow_right_circle_fill.svg">',
         // ★ ページドットをカスタマイズ
         customPaging: function (slider, i) {
             return '<span class="reviews__dot"></span>';

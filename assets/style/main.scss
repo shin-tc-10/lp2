@@ -921,10 +921,10 @@ li {
     background-color: #0071CE;
     position: relative;
     @include mq() {
-        padding: vwt(35) vwt(31.7) vwt(34) vwt(34);
+        padding: vwt(35) vwt(30.1) vwt(34) vwt(30.1);
     }
     @include mq(lg) {
-        padding: px2Rem(35) px2Rem(31.7) px2Rem(34) px2Rem(34);
+        padding: px2Rem(35) px2Rem(30.1) px2Rem(34) px2Rem(30.1);
     }
     &__link {
     display: block;
